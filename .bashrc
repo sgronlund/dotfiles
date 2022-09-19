@@ -124,19 +124,37 @@ source "$OSH"/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 
 
-# "Stolen" from https://github.com/sayanarijit/pomo, wonderful snippet :)
+# "Stolen" and modified from https://github.com/sayanarijit/pomo, wonderful snippet :)
 function pomo() {
     arg1=$1
-    shift
-    args="$*"
+    arg2=$2
+    cycles=$3
 
-    min=${arg1:?Example: pomo 15 Take a break}
-    sec=$((min * 60))
-    msg="${args:?Example: pomo 15 Take a break}"
-
-    while true; do
-        date '+%H:%M' && sleep "${sec:?}" && notify-send -u critical -t 0 -a pomo "${msg:?}"
-    done
+    work=${arg1:?Example: pomo 45 15 }
+    split=$((work * 60))
+    pause=${arg2:?Example: pomo 45 15}
+    break=$((pause * 60))
+    wrkmsg="Pomodoro over"
+    brkmsg="Break over"
+    
+    if test -z "$cycles" 
+    then
+      
+      while true; do
+          echo "(${work})/(${pause}) Pomodoro started" 
+          sleep "${split:?}" && notify-send -u critical -t 0 -a pomo "$wrkmsg"
+          sleep "${break:?}" && notify-send -u critical -t 0 -a pomo "$brkmsg"
+      done
+    else
+      
+      for ((i=0; i < $cycles; ++i))
+      do
+          declare -i temp=1
+          echo "Cycle $((i + temp)) of $cycles (${work})/(${pause}) Pomodoro started"
+          sleep "${split:?}" && notify-send -u critical -t 0 -a pomo "$wrkmsg"
+          sleep "${break:?}" && notify-send -u critical -t 0 -a pomo "$brkmsg"
+      done
+    fi
 }
 
 
