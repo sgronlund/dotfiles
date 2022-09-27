@@ -159,10 +159,16 @@ function pomo() {
 
 
 export PATH="${PATH}:${HOME}/.local/bin/"
+# export PATH="${PATH}:${HOME}/.cargo/bin/"
+
 # Access windows partition more easily
 alias windev="code /media/sgronlu/OS/Users/frost/Desktop/Utveckling/"
 alias winuni="code /media/sgronlu/OS/Users/frost/Desktop/Universitetet/"
 alias vault="code /media/sgronlu/OS/Users/frost/Desktop/obNotes/"
+# Ease updating all the packages
+alias up="sudo snap refresh && sudo apt update && sudo apt upgrade"
 
 
 (cat ~/.cache/wal/sequences &)
+. "$HOME/.cargo/env"
+source /home/sgronlu/Dev/alacritty/extra/completions/alacritty.bash
