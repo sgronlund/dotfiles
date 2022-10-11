@@ -160,7 +160,7 @@ function pomo() {
 
 #https://askubuntu.com/questions/1212722/unable-to-launch-evince fix stupid evince bug with default applications
 
-# temp
+# temp, temp
 
 export PATH="${PATH}:${HOME}/.local/bin/"
 # export PATH="${PATH}:${HOME}/.cargo/bin/"
