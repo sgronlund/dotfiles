@@ -160,8 +160,6 @@ function pomo() {
 
 #https://askubuntu.com/questions/1212722/unable-to-launch-evince fix stupid evince bug with default applications
 
-# temp, temp
-
 export PATH="${PATH}:${HOME}/.local/bin/"
 # export PATH="${PATH}:${HOME}/.cargo/bin/"
 
@@ -170,7 +168,7 @@ alias windev="code /media/sgronlu/OS/Users/frost/Desktop/Utveckling/"
 alias winuni="code /media/sgronlu/OS/Users/frost/Desktop/Universitetet/"
 alias vault="code /media/sgronlu/OS/Users/frost/Desktop/obNotes/"
 # Ease updating all the packages
-alias up="sudo snap refresh && sudo apt update && sudo apt upgrade"
+alias up="sudo snap refresh && sudo apt update && sudo apt upgrade && sudo apt autoremove"
 alias updot="cp ~/.bashrc ~/Dev/dotfiles/.bashrc && cp ~/.config/alacritty/alacritty.yml ~/Dev/dotfiles/alacritty.yml"
 
 (cat ~/.cache/wal/sequences &)
