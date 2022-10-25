@@ -65,6 +65,8 @@ completions=(
   git
   composer
   ssh
+  pip
+  pip3
 )
 
 # Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)
@@ -171,7 +173,7 @@ alias vault="code /media/sgronlu/OS/Users/frost/Desktop/obNotes/"
 alias up="sudo snap refresh && sudo apt update && sudo apt upgrade && sudo apt autoremove"
 alias updot="cp ~/.bashrc ~/Dev/dotfiles/.bashrc && cp ~/.config/alacritty/alacritty.yml ~/Dev/dotfiles/alacritty.yml"
 
-(cat ~/.cache/wal/sequences &)
+# (cat ~/.cache/wal/sequences &)
 . "$HOME/.cargo/env"
 source /home/sgronlu/Dev/alacritty/extra/completions/alacritty.bash
 
