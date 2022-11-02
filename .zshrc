@@ -147,6 +147,9 @@ alias vault="code /media/sgronlu/OS/Users/frost/Desktop/obNotes/"
 alias up="sudo snap refresh && sudo apt update && sudo apt upgrade && sudo apt autoremove"
 alias updot="cp ~/.zshrc ~/Dev/dotfiles/.zshrc && cp ~/.config/alacritty/alacritty.yml ~/Dev/dotfiles/alacritty.yml"
 
+# change brightness
+alias light="brightness-controller"
+
 # (cat ~/.cache/wal/sequences &)
 . "$HOME/.cargo/env"
 source /home/sgronlu/Dev/alacritty/extra/completions/alacritty.bash
