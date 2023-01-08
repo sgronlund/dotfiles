@@ -156,3 +156,6 @@ source /home/sgronlu/Dev/alacritty/extra/completions/alacritty.bash
 
 export PATH="${PATH}:${HOME}/.spicetify"
 export PATH="${PATH}:${HOME}/Dev/"
+
+
+xrandr  --ouput HDMI-A-0 --auto --above eDP
