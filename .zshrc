@@ -145,7 +145,7 @@ alias winuni="code /media/sgronlu/OS/Users/frost/Desktop/Universitetet/"
 alias vault="code /media/sgronlu/OS/Users/frost/Desktop/obNotes/"
 # Ease updating all the packages
 alias up="sudo snap refresh && sudo apt update && sudo apt upgrade && sudo apt autoremove"
-alias updot="cp ~/.zshrc ~/Dev/dotfiles/.zshrc && cp ~/.config/alacritty/alacritty.yml ~/Dev/dotfiles/alacritty.yml"
+alias updot="cp ~/.zshrc ~/Dev/dotfiles/.zshrc && cp ~/.config/alacritty/alacritty.yml ~/Dev/dotfiles/alacritty.yml&& cp ~/.config/i3/config ~/Dev/dotfiles/config"
 
 # change brightness
 alias light="brightness-controller"
@@ -158,4 +158,4 @@ export PATH="${PATH}:${HOME}/.spicetify"
 export PATH="${PATH}:${HOME}/Dev/"
 
 
-xrandr  --ouput HDMI-A-0 --auto --above eDP
+xrandr  --output HDMI-A-0 --auto --above eDP
