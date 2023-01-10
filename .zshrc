@@ -150,6 +150,11 @@ alias updot="cp ~/.zshrc ~/Dev/dotfiles/.zshrc && cp ~/.config/alacritty/alacrit
 # change brightness
 alias light="brightness-controller"
 
+#xrandr for handling monitors
+alias lapoff="xrandr --output eDP --off"
+alias lapon="xrandr --output eDP --auto"
+alias laphome="xrandr --output HDMI-A-0 --auto --above eDP"
+
 # (cat ~/.cache/wal/sequences &)
 . "$HOME/.cargo/env"
 source /home/sgronlu/Dev/alacritty/extra/completions/alacritty.bash
@@ -157,5 +162,5 @@ source /home/sgronlu/Dev/alacritty/extra/completions/alacritty.bash
 export PATH="${PATH}:${HOME}/.spicetify"
 export PATH="${PATH}:${HOME}/Dev/"
 
-
-xrandr  --output HDMI-A-0 --auto --above eDP
+# unnecessary
+#xrandr  --output HDMI-A-0 --auto --above eDP
