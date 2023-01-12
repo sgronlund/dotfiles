@@ -186,5 +186,5 @@ bar {
         position top
 }
 
-exec xrandr --output HDMI-A-0 --auto --above eDP 
+exec xrandr --output HDMI-1 --auto --above eDP-1 
 exec nitrogen --restore
