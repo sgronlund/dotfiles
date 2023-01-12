@@ -153,7 +153,7 @@ alias light="brightness-controller"
 #xrandr for handling monitors
 alias lapoff="xrandr --output eDP-1 --off"
 alias lapon="xrandr --output eDP-1 --auto"
-alias laphome="xrandr --output eDP-1 --auto && xrandr --output HDMI-A-1 --auto --above eDP --auto"
+alias laphome="xrandr --output eDP-1 --auto && xrandr --output HDMI-1 --auto --above eDP --auto"
 
 # (cat ~/.cache/wal/sequences &)
 . "$HOME/.cargo/env"
