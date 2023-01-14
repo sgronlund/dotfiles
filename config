@@ -185,6 +185,5 @@ bar {
         status_command i3status
         position top
 }
-
 exec xrandr --output HDMI-1 --auto --above eDP-1 
 exec nitrogen --restore

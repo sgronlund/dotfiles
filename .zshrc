@@ -71,7 +71,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vscode zsh-autosuggestions)
+plugins=(git vscode zsh-autosuggestions dotnet)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -161,6 +161,10 @@ source /home/sgronlu/Dev/alacritty/extra/completions/alacritty.bash
 
 export PATH="${PATH}:${HOME}/.spicetify"
 export PATH="${PATH}:${HOME}/Dev/"
+
+# fix for ssh-agent
+eval $(keychain --eval --agents ssh --quick --quiet)
+
 
 # unnecessary
 #xrandr  --output HDMI-A-0 --auto --above eDP
