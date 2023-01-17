@@ -71,7 +71,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vscode zsh-autosuggestions dotnet)
+plugins=(git vscode zsh-autosuggestions zsh-syntax-highlighting dotnet)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -167,4 +167,5 @@ eval $(keychain --eval --agents ssh --quick --quiet)
 
 
 # unnecessary
-#xrandr  --output HDMI-A-0 --auto --above eDP
+#xrandr  --output HDMI-A-0 --auto --above eDPexport PATH="$PATH:/opt/mssql-tools/bin"
+fpath+=${ZDOTDIR:-~}/.zsh_functions
