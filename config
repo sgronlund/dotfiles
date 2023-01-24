@@ -108,6 +108,9 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# allow for switching back to workspace with keybindings for current workspace
+workspace_auto_back_and_forth yes
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
@@ -176,6 +179,16 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
+# yoinked from https://bewilderedoctothorpe.net/2022/03/30/i3wm-zoom-screen-sharing/:
+# Set Zoom notification window to floating with no focus
+# Zoom (😱)
+for_window [instance="^zoom(\.|$)" title="^Zoom($|\s)"] floating disable, border pixel $borderpx
+for_window [instance="^zoom(\.|$)" title="^zoom"] floating enable, border none no_focus [instance="^zoom(\.|$)" title="^zoom"]
+for_window [instance="^join\?action=join" title="^Zoom($|\s)"] floating disable, border pixel $borderpx
+for_window [instance="^join\?action=join" title="^join\?action=join"] floating enable, border none no_focus [instance="^join\?action=join" title="^join\?action=join"]
+for_window [instance="^start\?action=start" title="^Zoom($|\s)"] floating disable, border pixel $borderpx
+for_window [instance="^start\?action=start" title="^start\?action=start"] floating enable, border none no_focus [instance="^start\?action=start" title="^start\?action=start"]
+# ---------------------------------------------------------
 
 bindsym $mod+r mode "resize"
 
