@@ -21,7 +21,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
-ZSH_THEME_RANDOM_CANDIDATES=( "muse" "mgutz" "cloud")
+#ZSH_THEME_RANDOM_CANDIDATES=( "muse" "mgutz" "cloud")
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -141,8 +141,6 @@ function pomo() {
 }
 
 
-#https://askubuntu.com/questions/1212722/unable-to-launch-evince fix stupid evince bug with default applications
-
 export PATH="${PATH}:${HOME}/.local/bin/"
 # export PATH="${PATH}:${HOME}/.cargo/bin/"
 
@@ -152,16 +150,18 @@ alias winuni="code /media/sgronlu/OS/Users/frost/Desktop/Universitetet/"
 alias vault="code /media/sgronlu/OS/Users/frost/Desktop/obNotes/"
 # Ease updating all the packages
 alias up="sudo snap refresh && sudo apt update && sudo apt upgrade && sudo apt autoremove"
-alias updot="cp ~/.zshrc ~/Dev/dotfiles/ && cp ~/.config/alacritty/alacritty.yml ~/Dev/dotfiles/ && cp ~/.config/i3/config ~/Dev/dotfiles/ && cp -r /home/sgronlu/.config/Code/User/sync/ ~/Dev/dotfiles/ && cp /etc/i3status.conf ~/Dev/dotfiles"
+alias updot="cp ~/.zshrc ~/Dev/dotfiles/ && cp ~/.config/alacritty/alacritty.yml ~/Dev/dotfiles/ && cp ~/.config/i3/config ~/Dev/dotfiles/ && cp -r /home/sgronlu/.config/Code/User/sync/ ~/Dev/dotfiles/ && cp -r ~/.config/polybar ~/Dev/dotfiles"
 
 # change brightness
 alias light="brightness-controller"
 
 #xrandr for handling monitors
-alias lapoff="xrandr --output eDP-1 --off"
-alias lapon="xrandr --output eDP-1 --auto"
+alias lapoff="xrandr --output eDP-1 --off && xrandr --output eDP --off"
+alias lapon="xrandr --output eDP-1 --auto && xrandr --output eDP --off"
 alias laphome="xrandr --output eDP-1 --auto && xrandr --output HDMI-1 --auto --above eDP --auto"
 
+#nerd alis
+alias vim="nvim"
 # (cat ~/.cache/wal/sequences &)
 . "$HOME/.cargo/env"
 source /home/sgronlu/Dev/alacritty/extra/completions/alacritty.bash
