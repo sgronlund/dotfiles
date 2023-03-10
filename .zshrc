@@ -155,7 +155,7 @@ alias updot="cp ~/.zshrc ~/Dev/dotfiles/ && cp ~/.config/alacritty/alacritty.yml
 # change brightness
 alias light="brightness-controller"
 
-#xrandr for handling monitors
+#xrandr for handling monitors, xrandr --listactivemonitors | awk '{print $4}'
 alias lapoff="xrandr --output eDP-1 --off && xrandr --output eDP --off"
 alias lapon="xrandr --output eDP-1 --auto && xrandr --output eDP --off"
 alias laphome="xrandr --output eDP-1 --auto && xrandr --output HDMI-1 --auto --above eDP --auto"
