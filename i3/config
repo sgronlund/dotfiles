@@ -197,6 +197,6 @@ default_border none
 
 exec_always ~/.config/polybar/launch.sh
 
-exec xrandr --output HDMI-1 --auto --above eDP-1 
-exec xrandr --output HDMI-A-0 --auto --above eDP
+exec xrandr --output HDMI-1 --primary --auto --above eDP-1 
+exec xrandr --output HDMI-A-0 --primary --auto --above eDP
 exec nitrogen --restore
