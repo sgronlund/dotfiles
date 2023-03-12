@@ -4,7 +4,7 @@
 
 
 # Check if anything is playing
-active=$(playerctl status --player=spotify)
+active=$(playerctl status -s --player=spotify)
 
 
 if [[ $active == "Playing" ]] || [[ $active == "Paused" ]]; then
