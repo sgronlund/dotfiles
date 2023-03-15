@@ -15,9 +15,7 @@ set $mod Mod4
 # is used in the bar {} block below.
 #font Inter:monospace 8
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 9
+font Iosevka Nerd Font 9
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -193,7 +191,7 @@ for_window [instance="^start\?action=start" title="^start\?action=start"] floati
 bindsym $mod+r mode "resize"
 
 # default window borders
-default_border none
+default_border pixel
 
 exec_always ~/.config/polybar/launch.sh
 
