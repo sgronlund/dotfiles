@@ -153,27 +153,30 @@ alias updot="cp ~/.zshrc ~/Dev/dotfiles/ && cp -r ~/.config/alacritty/ ~/Dev/dot
 
 # change brightness
 alias light="brightness-controller"
+# nnn specific things
+alias ls="nnn -de"
+alias nnn="nnn -de"
+export NNN_PLUG=""
+export NNN_FIFO="/tmp/nnn.fifo"
+export VISUAL="nvim"
+export EDITOR="nvim"
 
+# TODO: rewrite aliases into script,
 #xrandr for handling monitors, xrandr --listactivemonitors | awk '{print $4}'
 alias lapoff="xrandr --output eDP-1 --off && xrandr --output eDP --off"
 alias lapon="xrandr --output eDP-1 --auto && xrandr --output eDP --off"
 alias laphome="xrandr --output eDP-1 --auto && xrandr --output HDMI-1 --auto --above eDP --auto"
 
-#nerd alis
+#nerd alias
 alias vim="nvim"
 # (cat ~/.cache/wal/sequences &)
 . "$HOME/.cargo/env"
 source /home/sgronlu/Dev/alacritty/extra/completions/alacritty.bash
-
-export PATH="${PATH}:${HOME}/.spicetify"
 export PATH="${PATH}:${HOME}/Dev/"
 
 # fix for ssh-agent
 eval $(keychain --eval --agents ssh --quick --quiet)
 
-
-# unnecessary
-#xrandr  --output HDMI-A-0 --auto --above eDPexport PATH="$PATH:/opt/mssql-tools/bin"
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
