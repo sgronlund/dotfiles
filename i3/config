@@ -27,24 +27,27 @@ exec --no-startup-id dex --autostart --environment i3
 # lock
 bindsym $mod+l exec xflock4 
 
-# gaps
-gaps outer 1px
-gaps inner 2px
-
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
-
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioPause exec playerctl play-pause
-bindsym XF86AudioPrev exec playerctl previous
-bindsym XF86AudioNext exec playerctl next
+
+# brightness
+#bindsym XF86MonBrightnessDown exec xbacklight -inc 7
+#bindsym XF86MonBrightnessUp exec xbacklight -dec 7
+
+# added ignore to specific player since sometimes having two players running 
+# in any state caused the event to be changed???? 
+# ignoring youtube for now as it made things mess up
+bindsym XF86AudioPlay exec playerctl --ignore-player=youtube play-pause
+bindsym XF86AudioPause exec playerctl  --ignore-player=youtube play-pause
+bindsym XF86AudioPrev exec playerctl  --ignore-player=youtube previous
+bindsym XF86AudioNext exec playerctl  --ignore-player=youtube next
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -172,7 +175,5 @@ bindsym $mod+r mode "resize"
 default_border pixel
 
 exec_always ~/.config/polybar/launch.sh
-
-exec xrandr --output HDMI-1 --primary --auto --above eDP-1 
-exec xrandr --output HDMI-A-0 --primary --auto --above eDP
-exec nitrogen --restore
+exec_always --no-startup-id picom -b
+exec_always nitrogen --restore

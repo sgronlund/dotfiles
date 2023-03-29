@@ -149,8 +149,7 @@ alias windev="code /media/sgronlu/OS/Users/frost/Desktop/Utveckling/"
 alias winuni="code /media/sgronlu/OS/Users/frost/Desktop/Universitetet/"
 # Ease updating all the packages
 alias up="sudo snap refresh && sudo apt update && sudo apt upgrade && sudo apt autoremove"
-alias updot="cp ~/.zshrc ~/Dev/dotfiles/ && cp -r ~/.config/alacritty/ ~/Dev/dotfiles/ && cp -r ~/.config/i3/ ~/Dev/dotfiles/ && cp -r /home/sgronlu/.config/Code/User/sync/ ~/Dev/dotfiles/ && cp -r ~/.config/polybar ~/Dev/dotfiles"
-
+alias updot="cp ~/.zshrc ~/Dev/dotfiles/ && cp -r ~/.config/alacritty/ ~/Dev/dotfiles/ && cp -r ~/.config/i3/ ~/Dev/dotfiles/ && cp -r /home/sgronlu/.config/Code/User/sync/ ~/Dev/dotfiles/ && cp -r ~/.config/polybar ~/Dev/dotfiles && cp -r ~/.config/picom ~/Dev/dotfiles"
 # change brightness
 alias light="brightness-controller"
 # nnn specific things
