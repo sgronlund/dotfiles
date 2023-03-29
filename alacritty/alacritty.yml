@@ -208,7 +208,7 @@ colors:
     yellow: '#aa820c'
   primary:
     background: '#191919'
-    foreground: '#786b53'
+    foreground: '#ffffff'
   selection:
     background: '#786b53'
     text: '#fac800'
