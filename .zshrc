@@ -1,3 +1,4 @@
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -78,7 +79,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vscode zsh-autosuggestions zsh-syntax-highlighting colored-man-pages)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,52 +109,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-function pomo() {
-    arg1=$1
-    arg2=$2
-    cycles=$3
-
-    work=${arg1:?Example: pomo 45 15 }
-    split=$((work * 60))
-    pause=${arg2:?Example: pomo 45 15}
-    break=$((pause * 60))
-    wrkmsg="Pomodoro over"
-    brkmsg="Break over"
-    
-    if test -z "$cycles" 
-    then
-      
-      while true; do
-          echo "(${work})/(${pause}) Pomodoro started" 
-          sleep "${split:?}" && notify-send -u critical -t 0 -a pomo "$wrkmsg"
-          sleep "${break:?}" && notify-send -u critical -t 0 -a pomo "$brkmsg"
-      done
-    else
-      
-      for ((i=0; i < $cycles; ++i))
-      do
-          declare -i temp=1
-          echo "Cycle $((i + temp)) of $cycles (${work})/(${pause}) Pomodoro started"
-          sleep "${split:?}" && notify-send -u critical -t 0 -a pomo "$wrkmsg"
-          sleep "${break:?}" && notify-send -u critical -t 0 -a pomo "$brkmsg"
-      done
-    fi
-}
 
 
 export PATH="${PATH}:${HOME}/.local/bin/"
 # export PATH="${PATH}:${HOME}/.cargo/bin/"
 
-# Access windows partition more easily
-alias windev="code /media/sgronlu/OS/Users/frost/Desktop/Utveckling/"
-alias winuni="code /media/sgronlu/OS/Users/frost/Desktop/Universitetet/"
 # Ease updating all the packages
 alias up="sudo snap refresh && sudo apt update && sudo apt upgrade && sudo apt autoremove"
-alias updot="cp ~/.zshrc ~/Dev/dotfiles/ && cp -r ~/.config/alacritty/ ~/Dev/dotfiles/ && cp -r ~/.config/i3/ ~/Dev/dotfiles/ && cp -r /home/sgronlu/.config/Code/User/sync/ ~/Dev/dotfiles/ && cp -r ~/.config/polybar ~/Dev/dotfiles && cp -r ~/.config/picom ~/Dev/dotfiles"
+alias updot="cp ~/.zshrc ~/Dev/dotfiles/ && cp -r ~/.config/alacritty/ ~/Dev/dotfiles/ && cp -r ~/.config/i3/ ~/Dev/dotfiles/ && cp -r /home/sgronlu/.config/Code/User/sync/ ~/Dev/dotfiles/ && cp -r ~/.config/polybar ~/Dev/dotfiles && cp -r ~/.config/picom ~/Dev/dotfiles && cp -r ~/.config/scripts ~/Dev/dotfiles"
 # change brightness
 alias light="brightness-controller"
-# nnn specific things
-alias ls="nnn -de"
 alias nnn="nnn -de"
 export NNN_PLUG=""
 export NNN_FIFO="/tmp/nnn.fifo"
@@ -162,9 +127,8 @@ export EDITOR="nvim"
 
 # TODO: rewrite aliases into script,
 #xrandr for handling monitors, xrandr --listactivemonitors | awk '{print $4}'
-alias lapoff="xrandr --output eDP-1 --off && xrandr --output eDP --off"
-alias lapon="xrandr --output eDP-1 --auto && xrandr --output eDP --off"
-alias laphome="xrandr --output eDP-1 --auto && xrandr --output HDMI-1 --auto --above eDP --auto"
+alias lapoff="monitor.sh 2"
+alias lapon="monitor.sh 1"
 
 #nerd alias
 alias vim="nvim"
@@ -172,7 +136,7 @@ alias vim="nvim"
 . "$HOME/.cargo/env"
 source /home/sgronlu/Dev/alacritty/extra/completions/alacritty.bash
 export PATH="${PATH}:${HOME}/Dev/"
-
+export PATH="${PATH}:${HOME}/.config/scripts/"
 # fix for ssh-agent
 eval $(keychain --eval --agents ssh --quick --quiet)
 
