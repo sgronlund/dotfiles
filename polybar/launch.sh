@@ -8,4 +8,4 @@ polybar-msg cmd quit
 
 # Launch example bar
 echo "---" | tee -a /tmp/polybar1.log
-polybar example --config=$HOME/.config/polybar/config.ini &
+polybar example --config="$HOME/.config/polybar/config.ini" &
