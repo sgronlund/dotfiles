@@ -15,7 +15,7 @@ set $mod Mod4
 # is used in the bar {} block below.
 #font Inter:monospace 8
 
-font Iosevka Nerd Font 9
+font  Iosevka Nerd Font 9
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -172,7 +172,19 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # default window borders
-default_border pixel
+default_border normal
+
+
+## Color section
+# class                 border  bground text    indicator child_border
+client.focused          #FAC800 #FAC800 #191919 #786B53   #fac800
+client.focused_inactive #786B53 #786B53 #191919 #484E50   #5F676A
+client.unfocused        #786B53 #707880 #191919 #292D2E   #222222
+client.urgent           #A54242 #A54242 #191919 #900000   #900000
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+
+client.background       #ffffff
+
 
 exec_always ~/.config/polybar/launch.sh
 exec_always --no-startup-id picom -b
