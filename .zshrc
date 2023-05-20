@@ -16,6 +16,13 @@ export VISUAL="nvim"
 export EDITOR="nvim"
 alias lapoff="monitor.sh 2"
 alias lapon="monitor.sh 1"
+alias gs="git status"
+alias ga="git add"
+alias gaa="git add ."
+alias gc="git commit"
+alias gl="git pull"
+alias gp="git push"
+alias gcb="git checkout -b"
 
 autoload -U compinit
 zstyle ':completion:*' menu select
