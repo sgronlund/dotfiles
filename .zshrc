@@ -23,6 +23,8 @@ alias gc="git commit"
 alias gl="git pull"
 alias gp="git push"
 alias gcb="git checkout -b"
+alias gd="git diff"
+
 
 autoload -U compinit
 zstyle ':completion:*' menu select

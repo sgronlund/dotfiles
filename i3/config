@@ -76,8 +76,9 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-# focus the child container
-#bindsym $mod+d focus child
+# filesystem
+bindsym $mod+o exec alacritty -e nnn
+
 
 # allow for switching back to workspace with keybindings for current workspace
 workspace_auto_back_and_forth yes
@@ -153,7 +154,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # default window borders
-default_border normal
+default_border none
 
 # zoom fix! 
 for_window [class="zoom" instance="zoom "] floating enable
