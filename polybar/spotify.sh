@@ -4,12 +4,12 @@
 
 
 # Check if anything is playing
-active=$(playerctl status -s --player=spotify)
+active=$(playerctl status -s)
 
 
 if [[ $active == "Playing" ]] || [[ $active == "Paused" ]]; then
-  artist=$(playerctl metadata artist --player=spotify)
-  song=$(playerctl metadata title --player=spotify)
+  artist=$(playerctl metadata artist )
+  song=$(playerctl metadata title )
   
   # Handle long song names, maybe handle artist too?
   max_length=35
@@ -19,7 +19,7 @@ if [[ $active == "Playing" ]] || [[ $active == "Paused" ]]; then
    
   # no artist, podcast playing --> album is artist
   if [[ $artist  == "" ]]; then
-    artist=$(playerctl metadata album --player=spotify)
+    artist=$(playerctl metadata album )
   fi
   echo "$song - $artist"
 else
