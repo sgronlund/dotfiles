@@ -1,12 +1,17 @@
 autoload -U colors && colors
-HISTSIZE=10000
-SAVEHIST=10000
+
+# history setup
+setopt SHARE_HISTORY
+HISTFILE=$HOME/.zhistory
+SAVEHIST=1000
+HISTSIZE=999
+setopt HIST_EXPIRE_DUPS_FIRST
 
 export PATH="${PATH}:${HOME}/.local/bin/"
 
 # Ease updating all the packages
 alias up="sudo snap refresh && sudo apt update && sudo apt upgrade && sudo apt autoremove"
-alias updot="cp ~/.zshrc ~/Dev/dotfiles/ && cp -r ~/.config/alacritty/ ~/Dev/dotfiles/ && cp -r ~/.config/i3/ ~/Dev/dotfiles/ && cp -r /home/sgronlu/.config/Code/User/sync/ ~/Dev/dotfiles/ && cp -r ~/.config/polybar ~/Dev/dotfiles && cp -r ~/.config/picom ~/Dev/dotfiles && cp -r ~/.config/scripts ~/Dev/dotfiles"
+alias updot="cp ~/.zshrc ~/Dev/dotfiles/ && cp -r ~/.config/alacritty/ ~/Dev/dotfiles/ && cp -r ~/.config/i3/ ~/Dev/dotfiles/ && cp -r /home/sgronlu/.config/Code/User/sync/ ~/Dev/dotfiles/ && cp -r ~/.config/polybar ~/Dev/dotfiles && cp -r ~/.config/picom ~/Dev/dotfiles && cp -r ~/.config/scripts ~/Dev/dotfiles && cp -r ~/.config/nvim/ ~/Dev/dotfiles/"
 # change brightness
 alias light="brightness-controller"
 alias nnn="nnn -de -T t"
@@ -24,7 +29,7 @@ alias gl="git pull"
 alias gp="git push"
 alias gcb="git checkout -b"
 alias gd="git diff"
-
+alias suspend="sudo systemctl suspend"
 
 autoload -U compinit
 zstyle ':completion:*' menu select
