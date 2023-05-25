@@ -6,7 +6,8 @@ these are my dotfiles, simple enough.
 - zsh
 - alacritty
 - polybar
-
+- nvim
+    - this specific base [configuration][https://github.com/NvChad/NvChad) 
 
 
 ## polybar scripts
