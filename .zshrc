@@ -1,12 +1,12 @@
 autoload -U colors && colors
-
+#source /home/sgronlu/Dev/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source /home/sgronlu/Dev/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source /home/sgronlu/Dev/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # history setup
 setopt SHARE_HISTORY
-HISTFILE=$HOME/.zhistory
-SAVEHIST=1000
-HISTSIZE=999
-setopt HIST_EXPIRE_DUPS_FIRST
-
+SAVEHIST=12000
+HISTSIZE=10000
+HISTFILE=~/.zsh_history
 export PATH="${PATH}:${HOME}/.local/bin/"
 
 # Ease updating all the packages
@@ -31,12 +31,6 @@ alias gcb="git checkout -b"
 alias gd="git diff"
 alias suspend="sudo systemctl suspend"
 
-autoload -U compinit
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots)
-
 
 fpath+=($HOME/Dev/pure)
 # .zshrc
@@ -56,5 +50,3 @@ alias nvm="unalias nvm; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; nvm $@"
 
 # fix for ssh-agent
 eval $(keychain --eval --agents ssh --quick --quiet)
-source /home/sgronlu/Dev/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /home/sgronlu/Dev/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
