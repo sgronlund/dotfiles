@@ -37,7 +37,7 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 
 # kill focused window
-bindsym $mod+q kill
+bindsym $mod+shift+q kill
 
 # start dmenu 
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
