@@ -29,8 +29,8 @@ alias gl="git pull"
 alias gp="git push"
 alias gcb="git checkout -b"
 alias gd="git diff"
+alias ls="ls -la"
 alias suspend="sudo systemctl suspend"
-
 
 fpath+=($HOME/Dev/pure)
 # .zshrc
