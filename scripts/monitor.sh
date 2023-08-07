@@ -15,7 +15,7 @@ do
 done
 case $arg in
 	1)
-		xrandr --output "$ext" --primary --auto --above "$lap" --auto
+		xrandr --output "$ext" --primary --auto --right-of "$lap" --auto
 		;;
 	2)
 		xrandr --output "$lap" --off
