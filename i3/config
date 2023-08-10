@@ -8,8 +8,8 @@ exec --no-startup-id dex --autostart --environment i3
 # cred to https://github.com/nwg-piotr/autotiling
 exec_always --no-startup-id "autotiling.py"
 
-# lock
-bindsym $mod+l exec xflock4 
+# powermenu
+bindsym $mod+l exec --no-startup-id "~/.config/rofi/powermenu/type-1/powermenu.sh" 
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -39,8 +39,9 @@ bindsym $mod+Return exec alacritty
 # kill focused window
 bindsym $mod+shift+q kill
 
-# start dmenu 
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# start rofi 
+
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme $HOME/.config/rofi/launchers/type-4/style-4.rasi
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
