@@ -20,7 +20,8 @@ if [[ $active == "Playing" ]] || [[ $active == "Paused" ]]; then
     fi
     echo "$song - $artist"
   else
-    all_info=$(playerctl metadata --format '{{ title }}')
+    #all_info=$(playerctl metadata --format '{{ title }}')
+    all_info=$active #simplified for the time being
     echo "$all_info" # hopefully catches all of the cases
   fi
 else

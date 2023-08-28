@@ -29,8 +29,8 @@ alias gl="git pull"
 alias gp="git push"
 alias gcb="git checkout -b"
 alias gd="git diff"
+alias gcam="git commit -a -m"
 alias ls="ls -la"
-alias suspend="sudo systemctl suspend"
 
 fpath+=($HOME/Dev/pure)
 # .zshrc
@@ -39,6 +39,7 @@ prompt pure
 
 #nerd alias
 alias vim="nvim"
+alias matlab="matlab -nodesktop"
 # (cat ~/.cache/wal/sequences &)
 . "$HOME/.cargo/env"
 export PATH="${PATH}:${HOME}/Dev/"
