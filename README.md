@@ -7,7 +7,10 @@ these are my dotfiles, simple enough.
 - alacritty
 - polybar
 - nvim
-    - this specific base [configuration][https://github.com/NvChad/NvChad) 
+    - this specific base [configuration](https://github.com/NvChad/NvChad) 
+- rofi
+- dunst 
+- picom
 
 
 ## polybar scripts
