@@ -34,7 +34,7 @@ bindsym XF86AudioNext exec playerctl  --ignore-player=youtube next
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec xterm -fa 'Iosevka' -fs 12
 
 # kill focused window
 bindsym $mod+shift+q kill
@@ -78,7 +78,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # filesystem
-bindsym $mod+o exec alacritty -e nnn
+bindsym $mod+o exec alacritty -e nnn -denA -T t
 
 
 # allow for switching back to workspace with keybindings for current workspace
@@ -158,8 +158,9 @@ bindsym $mod+r mode "resize"
 default_border pixel
 
 # zoom fix! 
-for_window [class="zoom" instance="zoom "] floating enable
+for_window [class="zoom" instance="zoom"] floating enable
 
+for_window [class="shutter" instance="shutter"] floating enable
 ## Color section
 # class                 border  bground text    indicator child_border
 client.focused          #FAC800 #FAC800 #191919 #786B53   #fac800
