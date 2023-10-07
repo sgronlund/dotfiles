@@ -13,7 +13,7 @@ export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
 # Ease updating all the packages
 alias cat="bat"
 alias up="sudo snap refresh && sudo apt update && sudo apt upgrade && sudo apt autoremove"
-alias updot="cp ~/.zshrc ~/Dev/dotfiles/ && cp -r ~/.config/alacritty/ ~/Dev/dotfiles/ && cp -r ~/.config/i3/ ~/Dev/dotfiles/ && cp -r /home/sgronlu/.config/Code/User/sync/ ~/Dev/dotfiles/ && cp -r ~/.config/polybar ~/Dev/dotfiles && cp -r ~/.config/picom ~/Dev/dotfiles && cp -r ~/.config/scripts ~/Dev/dotfiles && cp -r ~/.config/nvim/lua/custom/ ~/Dev/dotfiles/ && cp -r ~/.config/rofi/ ~/Dev/dotfiles/ && cp -r ~/.config/dunst ~/Dev/dotfiles/"
+alias updot="cp ~/.zshrc ~/Dev/dotfiles/ && cp -r ~/.config/alacritty/ ~/Dev/dotfiles/ && cp -r ~/.config/i3/ ~/Dev/dotfiles/ && cp -r /home/sgronlu/.config/Code/User/sync/ ~/Dev/dotfiles/ && cp -r ~/.config/polybar ~/Dev/dotfiles && cp -r ~/.config/picom ~/Dev/dotfiles && cp -r ~/.config/scripts ~/Dev/dotfiles && cp -r ~/.config/nvim/lua/custom/ ~/Dev/dotfiles/ && cp -r ~/.config/rofi/ ~/Dev/dotfiles/ && cp -r ~/.config/dunst ~/Dev/dotfiles/ && cp ~/.Xresources ~/Dev/dotfiles/"
 # change brightness
 alias light="brightness-controller"
 alias nnn="nnn -denA -T t"
@@ -31,7 +31,7 @@ alias gl="git pull"
 alias gp="git push"
 alias gcb="git checkout -b"
 alias gd="git diff"
-alias ls="exa -la"
+alias ls="exa -lahS"
 alias gcam="git commit -a -m"
 
 fpath+=($HOME/Dev/pure)
