@@ -7,7 +7,8 @@ font Iosevka 9
 exec --no-startup-id dex --autostart --environment i3
 # cred to https://github.com/nwg-piotr/autotiling
 exec_always --no-startup-id "autotiling.py"
-
+#Load xterm theme upon startup :)
+exec_always --no-startup "xrdb -load ~/.Xresources"
 # powermenu
 bindsym $mod+l exec --no-startup-id "~/.config/rofi/powermenu/type-1/powermenu.sh" 
 
