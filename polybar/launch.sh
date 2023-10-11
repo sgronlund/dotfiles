@@ -7,5 +7,12 @@ polybar-msg cmd quit
 #killall -q polybar
 
 # Launch example bar
-echo "---" | tee -a /tmp/polybar1.log
-polybar example --config="$HOME/.config/polybar/config.ini" &
+# echo "---" | tee -a /tmp/polybar1.log
+# polybar example --config="$HOME/.config/polybar/config.ini" &
+if type "xrandr"; then
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    MONITOR=$m polybar --reload example --config="$HOME/.config/polybar/config.ini" &
+  done
+else
+  polybar --reload example &
+fi

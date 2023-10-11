@@ -33,6 +33,7 @@ alias gcb="git checkout -b"
 alias gd="git diff"
 alias ls="exa -lahS"
 alias gcam="git commit -a -m"
+alias fd="fdfind"
 
 fpath+=($HOME/Dev/pure)
 # .zshrc
