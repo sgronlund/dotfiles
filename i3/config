@@ -42,7 +42,7 @@ bindsym $mod+shift+q kill
 
 # start rofi 
 
-bindsym $mod+d exec --no-startup-id rofi -show drun -theme $HOME/.config/rofi/launchers/type-4/style-4.rasi
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme $HOME/.config/rofi/launchers/type-2/style-6.rasi
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
