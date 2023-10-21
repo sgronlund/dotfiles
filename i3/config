@@ -158,12 +158,10 @@ bindsym $mod+r mode "resize"
 # default window borders
 default_border pixel
 
-# zoom fix! 
-for_window [class="zoom" instance="zoom"] floating enable
-
-for_window [class="Shutter" instance="shutter"] floating enable
-
 #Default behaviour for some applications it's nice to have for me :)
+for_window [class="zoom" instance="zoom"] floating enable
+for_window [class="Shutter" instance="shutter"] floating enable
+for_window [class="Thunar" instance="thunar"] floating enable
 assign [class="Spotify"] $ws1
 assign [class="discord"] $ws1
 assign [class="slack"] $ws1 
