@@ -160,6 +160,7 @@ default_border pixel
 
 #Default behaviour for some applications it's nice to have for me :)
 for_window [class="zoom" instance="zoom"] floating enable
+for_window [class="Todoist" instance="todoist"] floating enable
 for_window [class="Shutter" instance="shutter"] floating enable
 for_window [class="Thunar" instance="thunar"] floating enable
 assign [class="Spotify"] $ws1
