@@ -34,6 +34,11 @@ alias ls="exa -lahS"
 alias gcam="git commit -a -m"
 alias fd="fdfind"
 
+cheat ()
+{
+	curl "cht.sh/$1"
+}
+
 fpath+=($HOME/Dev/pure)
 # .zshrc
 autoload -U promptinit; promptinit
