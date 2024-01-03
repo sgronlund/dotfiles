@@ -174,7 +174,6 @@ client.urgent           #A54242 #A54242 #191919 #900000   #900000
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 client.background       #ffffff
 
-
 exec_always ~/.config/polybar/launch.sh
 exec_always --no-startup-id picom -b
 exec_always nitrogen --restore
