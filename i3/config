@@ -37,6 +37,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec wezterm # xterm -fa 'Iosevka' -fs 12
 
+# screengrab
+bindsym $mod+Print exec maim -s /home/sgronlu/Pictures/$(date +%s).png 
+
 # kill focused window
 bindsym $mod+shift+q kill
 
@@ -162,9 +165,9 @@ for_window [class="Todoist" instance="todoist"] floating enable
 for_window [class="Shutter" instance="shutter"] floating enable
 for_window [class="Thunar" instance="thunar"] floating enable
 assign [class="Spotify"] $ws1
-assign [class="discord"] $ws1
-assign [class="slack"] $ws1 
-assign [class="Mail"] $ws1 
+assign [class="discord"] $ws2
+assign [class="slack"] $ws2
+assign [class="thunderbird"] $ws1 
 ## Color section
 # class                 border  bground text    indicator child_border
 client.focused          #FAC800 #FAC800 #191919 #786B53   #fac800
@@ -174,6 +177,10 @@ client.urgent           #A54242 #A54242 #191919 #900000   #900000
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 client.background       #ffffff
 
+# bar {
+#         status_command i3status
+#         position  top
+# }
 exec_always ~/.config/polybar/launch.sh
 exec_always --no-startup-id picom -b
 exec_always nitrogen --restore

@@ -31,9 +31,18 @@ alias gp="git push"
 alias gcb="git checkout -b"
 alias gd="git diff"
 alias ls="exa -lahS"
-alias gcam="git commit -a -m"
+alias gcm="git commit -m"
+# this alias can be used efficiently within a repo 
+# that has been cloned with the usage of --bare
+# note that this alias also creates a new branch
+alias gwab="git worktree add -b"
+alias gwa="git worktree add"
+alias gwl="git worktree list"
 alias fd="fdfind"
 
+#usage would be something like cheat python/pandas+csv and
+#you'd get results for common csv operations when using 
+#pandas
 cheat ()
 {
 	curl "cht.sh/$1"
