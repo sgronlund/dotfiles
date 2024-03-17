@@ -6,9 +6,7 @@ font Iosevka 9
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 # cred to https://github.com/nwg-piotr/autotiling
-exec_always --no-startup-id "autotiling.py"
-#Load xterm theme upon startup :)
-exec_always --no-startup "xrdb -load ~/.Xresources"
+exec_always --no-startup-id autotiling
 # powermenu
 bindsym $mod+l exec --no-startup-id "~/.config/rofi/powermenu/type-1/powermenu.sh" 
 
@@ -35,7 +33,7 @@ bindsym XF86AudioNext exec playerctl  --ignore-player=youtube next
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec wezterm # xterm -fa 'Iosevka' -fs 12
+bindsym $mod+Return exec alacritty 
 
 # screengrab
 bindsym $mod+Print exec maim -s /home/sgronlu/Pictures/$(date +%s).png 

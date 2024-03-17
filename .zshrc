@@ -1,6 +1,6 @@
 autoload -U colors && colors
-source /home/sgronlu/Dev/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-source /home/sgronlu/Dev/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/frost/Dev/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source /home/frost/Dev/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # history setup
 setopt SHARE_HISTORY
 SAVEHIST=12000
@@ -11,8 +11,8 @@ export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
 
 # Ease updating all the packages
 alias cat="bat"
-alias up="sudo snap refresh && sudo apt update && sudo apt upgrade && sudo apt autoremove"
-alias updot="cp ~/.zshrc ~/Dev/dotfiles/ && cp -r ~/.config/alacritty/ ~/Dev/dotfiles/ && cp -r ~/.config/i3/ ~/Dev/dotfiles/ && cp -r /home/sgronlu/.config/Code/User/sync/ ~/Dev/dotfiles/ && cp -r ~/.config/polybar ~/Dev/dotfiles && cp -r ~/.config/picom ~/Dev/dotfiles && cp -r ~/.config/scripts ~/Dev/dotfiles && cp -r ~/.config/nvim/ ~/Dev/dotfiles/ && cp -r ~/.config/rofi/ ~/Dev/dotfiles/ && cp -r ~/.config/dunst ~/Dev/dotfiles/ && cp ~/.Xresources ~/Dev/dotfiles/ && cp ~/.wezterm.lua ~/Dev/dotfiles/"
+alias up="sudo apt update && sudo apt upgrade && sudo apt autoremove"
+alias updot="cp ~/.zshrc ~/Dev/dotfiles/ && cp -r ~/.config/alacritty/ ~/Dev/dotfiles/ && cp -r ~/.config/i3/ ~/Dev/dotfiles/ && cp -r ~/.config/polybar ~/Dev/dotfiles && cp -r ~/.config/picom ~/Dev/dotfiles && cp -r ~/.config/scripts ~/Dev/dotfiles && cp -r ~/.config/nvim/ ~/Dev/dotfiles/ && cp -r ~/.config/rofi/ ~/Dev/dotfiles/ && cp -r ~/.config/dunst ~/Dev/dotfiles/ && cp ~/.wezterm.lua ~/Dev/dotfiles/"
 # change brightness
 alias light="brightness-controller"
 alias nnn="nnn -denA -T t"
@@ -66,4 +66,5 @@ alias nvm="unalias nvm; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; nvm $@"
 
 eval "$(zoxide init zsh)"
 # fix for ssh-agent
-eval $(keychain --eval --agents ssh --quick --quiet)
+#eval $(keychain --eval --agents ssh --quick --quiet)
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
