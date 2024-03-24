@@ -173,6 +173,10 @@ assign [class="Spotify"] $ws1
 assign [class="discord"] $ws2
 assign [class="slack"] $ws2
 assign [class="thunderbird"] $ws1 
+
+gaps inner 6
+gaps outer 1
+
 ## Color section
 # class                 border  bground text    indicator child_border
 client.focused          #FAC800 #FAC800 #191919 #786B53   #fac800
@@ -188,4 +192,4 @@ client.background       #ffffff
 # }
 exec_always ~/.config/polybar/launch.sh
 exec_always --no-startup-id picom -b
-exec_always nitrogen --restore
+#exec_always nitrogen --restore
