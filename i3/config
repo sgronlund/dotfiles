@@ -80,7 +80,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # filesystem
-bindsym $mod+o exec wezterm start -- nnn -denA -T t 
+bindsym $mod+o exec alacritty -e nnn -denA -T t 
 #xterm -fa 'Iosevka' -fs 12 -e "nnn -denA -T t"
 
 # allow for switching back to workspace with keybindings for current workspace

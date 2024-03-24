@@ -39,7 +39,7 @@ alias gwab="git worktree add -b"
 alias gwa="git worktree add"
 alias gwl="git worktree list"
 alias fd="fdfind"
-
+alias lg="lazygit"
 #usage would be something like cheat python/pandas+csv and
 #you'd get results for common csv operations when using 
 #pandas
@@ -59,6 +59,7 @@ alias matlab="matlab -nodesktop"
 # (cat ~/.cache/wal/sequences &)
 . "$HOME/.cargo/env"
 export PATH="${PATH}:${HOME}/Dev/"
+export PATH="${PATH}:${HOME}/Dev/lazygit/"
 export PATH="${PATH}:${HOME}/.config/scripts/"
 
 export NVM_DIR="$HOME/.nvm"
