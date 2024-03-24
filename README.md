@@ -15,3 +15,4 @@ these are my dotfiles, simple enough.
 - picom
 - variety
   - slideshow and wallpapers, I also use feh
+- nnn
