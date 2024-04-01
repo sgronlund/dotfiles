@@ -47,6 +47,24 @@ cheat ()
 {
 	curl "cht.sh/$1"
 }
+gen_gitignore ()
+{
+    list=$(curl -s "https://www.toptal.com/developers/gitignore/api/list")
+    str=$1
+    parts=("${(@s:,:)str}")
+    real_parts=""
+    for idx in {1..$#parts}
+    do
+        if echo "$list" | grep -q "$parts[idx]" ; then
+            if [[ $idx == 1 ]]; then
+                real_parts="${real_parts}${parts[idx]}"
+            else 
+                real_parts="${real_parts},${parts[idx]}"
+            fi
+	fi
+    done
+    wget -q "https://www.toptal.com/developers/gitignore/api/$real_parts" -O .gitignore
+}
 
 fpath+=($HOME/Dev/pure)
 # .zshrc
