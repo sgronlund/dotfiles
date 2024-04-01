@@ -35,6 +35,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec alacritty 
+bindsym $mod+Shift+Return exec alacritty --class floating_alacritty 
 
 # screengrab
 bindsym $mod+Print exec maim -s /home/sgronlu/Pictures/$(date +%s).png 
@@ -168,11 +169,14 @@ default_border pixel
 for_window [class="zoom" instance="zoom"] floating enable
 for_window [class="Todoist" instance="todoist"] floating enable
 for_window [class="Shutter" instance="shutter"] floating enable
-for_window [class="Thunar" instance="thunar"] floating enable
+for_window [class="floating_alacritty"] floating enable
+
 assign [class="Spotify"] $ws1
-assign [class="discord"] $ws2
-assign [class="slack"] $ws2
 assign [class="thunderbird"] $ws1 
+assign [class="discord"] $ws2
+assign [class="Slack"] $ws2
+#need to assign based on title as the applications is missing WM_CLASS upon startup in some cases
+assign [title="Thorium"] $ws3
 
 gaps inner 6
 gaps outer 1
