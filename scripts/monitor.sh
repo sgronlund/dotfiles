@@ -15,7 +15,7 @@ do
 done
 case $arg in
 	1)
-		xrandr --output "$ext" --primary --auto --right-of "$lap" --auto --scale 1x1
+		xrandr --output "$ext" --primary --auto --right-of "$lap" --auto --scale 1.01x1.01
 		;;
 	2)
 		xrandr --output "$lap" --off
