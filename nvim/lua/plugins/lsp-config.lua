@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "clangd", "dockerls" },
+				ensure_installed = { "lua_ls", "clangd", "dockerls", "marksman"},
 			})
 		end,
 	},
@@ -25,6 +25,9 @@ return {
 				capabilities = capabilites,
 			})
 			lspconfig.dockerls.setup({
+				capabilities = capabilites,
+			})
+			lspconfig.marksman.setup({
 				capabilities = capabilites,
 			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
