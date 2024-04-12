@@ -38,7 +38,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+Return exec alacritty --class floating_alacritty 
 
 # screengrab
-bindsym $mod+Print exec maim -s /home/sgronlu/Pictures/$(date +%s).png 
+bindsym $mod+shift+x exec "maim -s | xclip -selection clipboard -t image/png" 
 
 # kill focused window
 bindsym $mod+shift+q kill
@@ -183,12 +183,12 @@ gaps outer 1
 
 ## Color section
 # class                 border  bground text    indicator child_border
-client.focused          #FAC800 #FAC800 #191919 #786B53   #fac800
-client.focused_inactive #786B53 #786B53 #191919 #484E50   #5F676A
-client.unfocused        #786B53 #707880 #191919 #292D2E   #222222
-client.urgent           #A54242 #A54242 #191919 #900000   #900000
-client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
-client.background       #ffffff
+# client.focused          #FAC800 #FAC800 #191919 #786B53   #fac800
+# client.focused_inactive #786B53 #786B53 #191919 #484E50   #5F676A
+# client.unfocused        #786B53 #707880 #191919 #292D2E   #222222
+# client.urgent           #A54242 #A54242 #191919 #900000   #900000
+# client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+# client.background       #ffffff
 
 # bar {
 #         status_command i3status
