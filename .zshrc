@@ -32,14 +32,15 @@ alias gcb="git checkout -b"
 alias gd="git diff"
 alias ls="exa -lahS"
 alias gcm="git commit -m"
+alias fd="fdfind"
+alias lg="lazygit"
+alias sa="sudo apt"
 # this alias can be used efficiently within a repo 
 # that has been cloned with the usage of --bare
 # note that this alias also creates a new branch
 alias gwab="git worktree add -b"
 alias gwa="git worktree add"
 alias gwl="git worktree list"
-alias fd="fdfind"
-alias lg="lazygit"
 #usage would be something like cheat python/pandas+csv and
 #you'd get results for common csv operations when using 
 #pandas
@@ -74,16 +75,15 @@ prompt pure
 #nerd alias
 alias vim="nvim"
 alias matlab="matlab -nodesktop"
-# (cat ~/.cache/wal/sequences &)
+alias v3="vim ~/.config/i3/config"
+alias vp="vim ~/.config/polybar/config.ini"
+alias vz="vim ~/.zshrc"
+alias sdi="sudo dpkg -i"
 . "$HOME/.cargo/env"
 export PATH="${PATH}:${HOME}/Dev/"
 export PATH="${PATH}:${HOME}/Dev/lazygit/"
 export PATH="${PATH}:${HOME}/.config/scripts/"
 
-export NVM_DIR="$HOME/.nvm"
-alias nvm="unalias nvm; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; nvm $@"
 
 eval "$(zoxide init zsh)"
-# fix for ssh-agent
-#eval $(keychain --eval --agents ssh --quick --quiet)
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+eval "$(~/.local/bin/mise activate zsh)"
