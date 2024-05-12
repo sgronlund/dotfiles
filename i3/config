@@ -176,11 +176,11 @@ assign [class="Spotify"] $ws1
 assign [class="thunderbird"] $ws1 
 assign [class="discord"] $ws2
 assign [class="Slack"] $ws2
+assign [class="Beeper"] $ws2
 #need to assign based on title as the applications is missing WM_CLASS upon startup in some cases
 assign [title="Thorium"] $ws3
 
-gaps inner 6
-gaps outer 1
+gaps inner 14
 
 ## Color section
 # class                 border  bground text    indicator child_border
@@ -190,11 +190,7 @@ gaps outer 1
 # client.urgent           #A54242 #A54242 #191919 #900000   #900000
 # client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 # client.background       #ffffff
-
-# bar {
-#         status_command i3status
-#         position  top
-# }
 exec_always ~/.config/polybar/launch.sh
 exec_always --no-startup-id picom -b
-#exec_always nitrogen --restore
+exec --no-startup-id spotify 
+exec --no-startup-id discord 
