@@ -68,16 +68,14 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *shifttermcmd[]  = { "alacritty --class floating_alacritty", NULL };
-static const char *nnncmd[]  = { "alacritty -e nnn -denA -T t", NULL };
 static const char *powermenucmd[]  = { "/home/frost/.config/rofi/powermenu/type-1/powermenu.sh", NULL };
-static const char *maimcmd[]  = { "maim -s | xclip -selection clipboard -t image/png", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_l,      spawn,          {.v = powermenucmd } },
-	{ MODKEY,                       XK_o,      spawn,          {.v = nnncmd } },
-	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = maimcmd } },
+	{ MODKEY,                       XK_o,      spawn,          SHCMD("alacritty -e nnn -denA -T t") },
+	{ MODKEY|ShiftMask,             XK_x,      spawn,          SHCMD("maim -s | xclip -selection clipboard -t image/png") },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = shifttermcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_Up,      focusstack,     {.i = +1 } },
