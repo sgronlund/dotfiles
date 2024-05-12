@@ -1,0 +1,8 @@
+slstatus &
+picom -b &
+spotify &
+discord &
+nm-applet &
+blueman-applet &
+feh --recursive --bg-fill --randomize /home/frost/Downloads/sötabilder &
+dwm

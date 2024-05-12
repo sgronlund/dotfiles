@@ -12,7 +12,7 @@ export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
 # Ease updating all the packages
 alias cat="bat"
 alias up="sudo apt update && sudo apt upgrade && sudo apt autoremove"
-alias updot="cp ~/.zshrc ~/Dev/dotfiles/ && cp -r ~/.config/alacritty/ ~/Dev/dotfiles/ && cp -r ~/.config/i3/ ~/Dev/dotfiles/ && cp -r ~/.config/polybar ~/Dev/dotfiles && cp -r ~/.config/picom ~/Dev/dotfiles && cp -r ~/.config/scripts ~/Dev/dotfiles && cp -r ~/.config/nvim/ ~/Dev/dotfiles/ && cp -r ~/.config/rofi/ ~/Dev/dotfiles/ && cp -r ~/.config/dunst ~/Dev/dotfiles/ && cp ~/.wezterm.lua ~/Dev/dotfiles/"
+alias updot="cp ~/.zshrc ~/Dev/dotfiles/ && cp -r ~/.config/alacritty/ ~/Dev/dotfiles/ && cp -r ~/.config/i3/ ~/Dev/dotfiles/ && cp -r ~/.config/polybar ~/Dev/dotfiles && cp -r ~/.config/picom ~/Dev/dotfiles && cp -r ~/.config/scripts ~/Dev/dotfiles && cp -r ~/.config/nvim/ ~/Dev/dotfiles/ && cp -r ~/.config/rofi/ ~/Dev/dotfiles/ && cp -r ~/.config/dunst ~/Dev/dotfiles/ && cp ~/Dev/dwm/config.h ~/Dev/dotfiles/suckless/dwm/  && cp ~/Dev/slstatus/config.h ~/Dev/dotfiles/suckless/slstatus/ "
 # change brightness
 alias light="brightness-controller"
 alias nnn="nnn -denA -T t"
