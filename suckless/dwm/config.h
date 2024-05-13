@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+#include <X11/XF86keysym.h>
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
@@ -67,28 +68,37 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
-static const char *shifttermcmd[]  = { "alacritty --class floating_alacritty", NULL };
+//static const char *shifttermcmd[]  = { "alacritty --class floating_alacritty", NULL };
 static const char *powermenucmd[]  = { "/home/frost/.config/rofi/powermenu/type-1/powermenu.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_d,      spawn,          SHCMD("rofi -show drun -theme /home/frost/.config/rofi/launchers/type-2/style-6.rasi") },
 	{ MODKEY,                       XK_l,      spawn,          {.v = powermenucmd } },
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("alacritty -e nnn -denA -T t") },
 	{ MODKEY|ShiftMask,             XK_x,      spawn,          SHCMD("maim -s | xclip -selection clipboard -t image/png") },
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = shifttermcmd } },
+	{ MODKEY|ShiftMask,             XK_Return, spawn,          SHCMD( "alacritty --class floating_alacritty") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_Up,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_Down,      focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
+	{ MODKEY,                       XK_Down,      focusstack,     {.i = +1 } },
+	{ MODKEY,                       XK_Up,      focusstack,     {.i = -1 } },
+	{ MODKEY|ShiftMask,                       XK_i,      incnmaster,     {.i = +1 } },
+	{ MODKEY|ShiftMask,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_Left,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_Right,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, spawn,           {.v = termcmd} },
+	{ 0,                       XF86XK_AudioPlay, spawn,           SHCMD("playerctl --ignore-player=youtube play-pause") },
+	{ 0,                       XF86XK_AudioPause, spawn,           SHCMD("playerctl --ignore-player=youtube play-pause") },
+	{ 0,                       XF86XK_AudioPrev, spawn,           SHCMD("playerctl --ignore-player=youtube previous") },
+	{ 0,                       XF86XK_AudioNext, spawn,           SHCMD("playerctl --ignore-player=youtube next") },
+	{ 0,                       XF86XK_MonBrightnessUp, spawn,           SHCMD("brightnessctl -q s 8%+") },
+	{ 0,                       XF86XK_MonBrightnessDown, spawn,           SHCMD("brightnessctl -q s 8%-") },
+	{ 0,                       XF86XK_AudioRaiseVolume, spawn,           SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +10%") },
+	{ 0,                       XF86XK_AudioLowerVolume, spawn,           SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -10%") },
+	{ 0,                       XF86XK_AudioMute, spawn,           SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle") },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,                       XK_f,      togglefullscr,      {0} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
