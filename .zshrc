@@ -3,6 +3,7 @@ source /home/frost/Dev/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source /home/frost/Dev/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # history setup
 setopt SHARE_HISTORY
+setopt EXTENDED_GLOB
 SAVEHIST=12000
 HISTSIZE=10000
 HISTFILE=~/.zsh_history
@@ -12,7 +13,7 @@ export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
 # Ease updating all the packages
 alias cat="bat"
 alias up="sudo apt update && sudo apt upgrade && sudo apt autoremove"
-alias updot="cp ~/.zshrc ~/Dev/dotfiles/ && cp -r ~/.config/alacritty/ ~/Dev/dotfiles/ && cp -r ~/.config/i3/ ~/Dev/dotfiles/ && cp -r ~/.config/polybar ~/Dev/dotfiles && cp -r ~/.config/picom ~/Dev/dotfiles && cp -r ~/.config/scripts ~/Dev/dotfiles && cp -r ~/.config/nvim/ ~/Dev/dotfiles/ && cp -r ~/.config/rofi/ ~/Dev/dotfiles/ && cp -r ~/.config/dunst ~/Dev/dotfiles/ && cp ~/Dev/dwm/config.h ~/Dev/dotfiles/suckless/dwm/  && cp ~/Dev/slstatus/config.h ~/Dev/dotfiles/suckless/slstatus/ "
+alias updot="cp ~/.zshrc ~/Dev/dotfiles/ && cp -r ~/.config/alacritty/ ~/Dev/dotfiles/ && cp -r ~/.config/i3/ ~/Dev/dotfiles/ && cp -r ~/.config/polybar ~/Dev/dotfiles && cp -r ~/.config/picom ~/Dev/dotfiles && cp -r ~/.config/scripts ~/Dev/dotfiles && cp -r ~/.config/nvim/ ~/Dev/dotfiles/ && cp -r ~/.config/rofi/ ~/Dev/dotfiles/ && cp -r ~/.config/dunst ~/Dev/dotfiles/ && cp -r ~/Dev/dwm/*~.git ~/Dev/dotfiles/suckless/dwm/  && cp -r ~/Dev/slstatus/*~.git ~/Dev/dotfiles/suckless/slstatus/ "
 # change brightness
 alias light="brightness-controller"
 alias nnn="nnn -denA -T t"
@@ -26,6 +27,7 @@ alias gs="git status"
 alias ga="git add"
 alias gaa="git add ."
 alias gc="git commit"
+alias gcl="git clone "
 alias gl="git pull"
 alias gp="git push"
 alias gcb="git checkout -b"
@@ -34,7 +36,6 @@ alias ls="exa -lahS"
 alias gcm="git commit -m"
 alias fd="fdfind"
 alias lg="lazygit"
-alias sa="sudo apt"
 # this alias can be used efficiently within a repo 
 # that has been cloned with the usage of --bare
 # note that this alias also creates a new branch
@@ -48,6 +49,7 @@ cheat ()
 {
 	curl "cht.sh/$1"
 }
+
 gen_gitignore ()
 {
     list=$(curl -s "https://www.toptal.com/developers/gitignore/api/list")
