@@ -13,7 +13,7 @@ export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
 # Ease updating all the packages
 alias cat="bat"
 alias up="sudo apt update && sudo apt upgrade && sudo apt autoremove"
-alias updot="cp ~/.zshrc ~/Dev/dotfiles/ && cp -r ~/.config/alacritty/ ~/Dev/dotfiles/ && cp -r ~/.config/i3/ ~/Dev/dotfiles/ && cp -r ~/.config/polybar ~/Dev/dotfiles && cp -r ~/.config/picom ~/Dev/dotfiles && cp -r ~/.config/scripts ~/Dev/dotfiles && cp -r ~/.config/nvim/ ~/Dev/dotfiles/ && cp -r ~/.config/rofi/ ~/Dev/dotfiles/ && cp -r ~/.config/dunst ~/Dev/dotfiles/ && cp -r ~/Dev/dwm/*~.git ~/Dev/dotfiles/suckless/dwm/  && cp -r ~/Dev/slstatus/*~.git ~/Dev/dotfiles/suckless/slstatus/ "
+alias updot="cp ~/.zshrc ~/Dev/dotfiles/ && cp -r ~/.config/alacritty/ ~/Dev/dotfiles/ && cp -r ~/.config/i3/ ~/Dev/dotfiles/ && cp -r ~/.config/polybar ~/Dev/dotfiles && cp -r ~/.config/picom ~/Dev/dotfiles && cp -r ~/.config/scripts ~/Dev/dotfiles && cp -r ~/.config/nvim/ ~/Dev/dotfiles/ && cp -r ~/.config/rofi/ ~/Dev/dotfiles/ && cp -r ~/.config/dunst ~/Dev/dotfiles/ && cp -r ~/Dev/dwm/*~.git ~/Dev/dotfiles/suckless/dwm/  && cp -r ~/Dev/slstatus/*~.git ~/Dev/dotfiles/suckless/slstatus/ && cp -r ~/Dev/st-flexipatch/*~.git ~/Dev/dotfiles/suckless/st/  "
 # change brightness
 alias light="brightness-controller"
 alias nnn="nnn -denA -T t"

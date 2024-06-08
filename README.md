@@ -4,7 +4,7 @@ these are my dotfiles, simple enough.
 ## what i use
 - ~i3~ dwm
 - zsh
-- ~alacritty~ st
+- ~alacritty~ st (uses flexipatch here)
 - ~polybar~ slstatus
 - nvim
 - rofi
