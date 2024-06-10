@@ -68,7 +68,6 @@ gen_gitignore ()
     done
     wget -q "https://www.toptal.com/developers/gitignore/api/$real_parts" -O .gitignore
 }
-
 fpath+=($HOME/Dev/pure)
 # .zshrc
 autoload -U promptinit; promptinit
@@ -80,6 +79,14 @@ alias matlab="matlab -nodesktop"
 alias v3="vim ~/.config/i3/config"
 alias vp="vim ~/.config/polybar/config.ini"
 alias vz="vim ~/.zshrc"
+venv(){
+    if [[ -d .venv ]]; then
+        source .venv/bin/activate
+    else
+        uv venv
+        source .venv/bin/activate
+    fi
+}
 alias sdi="sudo dpkg -i"
 . "$HOME/.cargo/env"
 export PATH="${PATH}:${HOME}/Dev/"
