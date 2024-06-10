@@ -31,6 +31,7 @@ static const char *tags[] = { "", "🗨", "", "4", "5", "6", "7", "8", "9"
 static const Rule rules[] = {
 	/* class                 instance      title       tags mask     isfloating   monitor */
     { "zoom",                NULL,         NULL,       0,            1,           -1 },
+    { "mpv",                NULL,         NULL,       0,            1,           -1 },
     { "floating_alacritty",  NULL,         NULL,       0,            1,           -1 },
     { "floating_st",  NULL,         NULL,       0,            1,           -1 },
     { "Slack",               NULL,         NULL,       1 << 1,       0,           -1 },
@@ -85,8 +86,8 @@ static const Key keys[] = {
 	//{ MODKEY|ShiftMask,             XK_Return, spawn,          SHCMD( "alacritty --class floating_alacritty") },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          SHCMD( "st -g 128x30 -c floating_st") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_Down,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_Up,      focusstack,     {.i = -1 } },
+	{ MODKEY|ShiftMask,                       XK_Down,      focusstack,     {.i = +1 } },
+	{ MODKEY|ShiftMask,                       XK_Up,      focusstack,     {.i = -1 } },
 	{ MODKEY|ShiftMask,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_Left,      setmfact,       {.f = -0.05} },
