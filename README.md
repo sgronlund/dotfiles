@@ -2,15 +2,20 @@
 
 these are my dotfiles, simple enough.
 ## what i use
-- ~i3~ dwm
+- dwm
 - zsh
-- ~alacritty~ st (uses flexipatch here)
-- ~polybar~ slstatus
+- st (flexipatch)
+- slstatus
 - nvim
 - rofi
   - use the following themes and scripts [repository here](https://github.com/adi1090x/rofi/tree/master) 
 - dunst 
 - picom
 - ~variety~ cronjob using feh
-- nnn
-- lazygit
+- nnn (file explorer)
+    - thunar for more "advanced" operations
+- lazygit (git TUI with basic keybinds)
+- lazydocker (same as above but for docker)
+- zoxide (cd but better)
+- mise (tool for managing versions of node, python, golang etc.)
+- uv (somewhat drop-in replace of pip written in rust)
