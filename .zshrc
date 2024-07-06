@@ -49,24 +49,30 @@ cheat ()
 {
 	curl "cht.sh/$1"
 }
-
+# usage here i gen_gitignore node,python
+# empty arguments output all available options
 gen_gitignore ()
 {
     list=$(curl -s "https://www.toptal.com/developers/gitignore/api/list")
     str=$1
     parts=("${(@s:,:)str}")
-    real_parts=""
-    for idx in {1..$#parts}
-    do
-        if echo "$list" | grep -q "$parts[idx]" ; then
-            if [[ $idx == 1 ]]; then
-                real_parts="${real_parts}${parts[idx]}"
-            else 
-                real_parts="${real_parts},${parts[idx]}"
-            fi
-	fi
-    done
-    wget -q "https://www.toptal.com/developers/gitignore/api/$real_parts" -O .gitignore
+    if [[ -z $parts ]] then
+        echo "No arguments provided, the following are valid options: \n"
+        echo $list
+    else
+        real_parts=""
+        for idx in {1..$#parts}
+        do
+            if echo "$list" | grep -q "$parts[idx]" ; then
+                if [[ $idx == 1 ]]; then
+                    real_parts="${real_parts}${parts[idx]}"
+                else 
+                    real_parts="${real_parts},${parts[idx]}"
+                fi
+        fi
+        done
+        wget -q "https://www.toptal.com/developers/gitignore/api/$real_parts" -O .gitignore
+    fi
 }
 fpath+=($HOME/Dev/pure)
 # .zshrc
@@ -87,6 +93,7 @@ venv(){
         source .venv/bin/activate
     fi
 }
+alias genreq="uv pip freeze | uv pip compile - -o requirements.txt"
 alias sdi="sudo dpkg -i"
 . "$HOME/.cargo/env"
 export PATH="${PATH}:${HOME}/Dev/"
