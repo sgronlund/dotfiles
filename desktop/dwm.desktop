@@ -1,7 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=dwm
-Comment=Dynamic window manager
-Exec=/home/frost/.config/scripts/startdwm
-Icon=dwm
-Type=XSession
