@@ -1,11 +1,1 @@
-picom -b &
-dunst &
-slstatus &
-spotify &
-discord &
-nm-applet &
-blueman-applet &
-feh --recursive --bg-fill --randomize /home/frost/Downloads/sötabilder &
-while true; do 
-    dwm 2> ~/.dwm.log
-done
+../../../../.config/scripts/startdwm
