@@ -2,14 +2,11 @@
 
 these are my dotfiles, simple enough.
 ## what i use
-- dwm
+- dwm/i3
 - zsh
 - st (flexipatch)
-- slstatus
 - nvim
-- rofi
-  - use the following themes and scripts [repository here](https://github.com/adi1090x/rofi/tree/master) 
-- dunst 
+- dunst
 - picom
 - ~variety~ cronjob using feh
 - nnn (file explorer)
