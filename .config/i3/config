@@ -33,8 +33,8 @@ bindsym XF86AudioNext exec playerctl  --ignore-player=youtube next
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty 
-bindsym $mod+Shift+Return exec alacritty --class floating_alacritty 
+bindsym $mod+Return exec st 
+bindsym $mod+Shift+Return exec st -c floating_st 
 
 # screengrab
 bindsym $mod+shift+x exec "maim -s | xclip -selection clipboard -t image/png" 
@@ -81,16 +81,16 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # filesystem
-bindsym $mod+o exec alacritty -e nnn -denA -T t 
+bindsym $mod+o exec st -g 128x30 -c floating_st -e nnn -denA -T t 
 
 # allow for switching back to workspace with keybindings for current workspace
 workspace_auto_back_and_forth yes
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: music"
-set $ws2 "2: chat"
-set $ws3 "3: web"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -160,25 +160,19 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# default window borders
-default_border pixel
-
 #Default behaviour for some applications it's nice to have for me :)
 for_window [class="zoom" instance="zoom"] floating enable
 for_window [class="Todoist" instance="todoist"] floating enable
 for_window [class="Shutter" instance="shutter"] floating enable
-for_window [class="floating_alacritty"] floating enable
 for_window [class="floating_st"] floating enable
 
 assign [class="Spotify"] $ws1
 assign [class="thunderbird"] $ws1 
 assign [class="discord"] $ws2
 assign [class="Slack"] $ws2
-assign [class="Beeper"] $ws2
-#need to assign based on title as the applications is missing WM_CLASS upon startup in some cases
 assign [title="Thorium"] $ws3
 
-gaps inner 14
+gaps inner 4
 
 ## Color section
 # class                 border  bground text    indicator child_border
@@ -188,7 +182,8 @@ gaps inner 14
 # client.urgent           #A54242 #A54242 #191919 #900000   #900000
 # client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 # client.background       #ffffff
-exec_always ~/.config/polybar/launch.sh
+bar {
+        status_command i3status
+        position top
+}
 exec_always --no-startup-id picom -b
-exec --no-startup-id spotify 
-exec --no-startup-id discord 
