@@ -6,6 +6,8 @@ exec --no-startup-id dex --autostart --environment i3
 # cred to https://github.com/nwg-piotr/autotiling
 exec_always --no-startup-id autotiling
 
+
+# yoinked from here https://wiki.archlinux.org/title/I3#Shutdown.2C_reboot.2C_lock_screen
 set $Locker i3lock && sleep 1
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
