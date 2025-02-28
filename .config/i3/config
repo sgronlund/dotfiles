@@ -5,6 +5,7 @@ set $mod Mod4
 exec --no-startup-id dex --autostart --environment i3
 # cred to https://github.com/nwg-piotr/autotiling
 exec_always --no-startup-id autotiling
+exec_always --no-startup-id syncthing
 
 
 # yoinked from here https://wiki.archlinux.org/title/I3#Shutdown.2C_reboot.2C_lock_screen
@@ -62,7 +63,8 @@ bindsym $mod+shift+x exec "maim -s | tee ~/Pictures/$(date +%s).png | xclip -sel
 bindsym $mod+shift+q kill
 
 bindsym $mod+d exec --no-startup-id dmenu_run
-#rofi -show drun -theme $HOME/.config/rofi/launchers/type-2/style-6.rasi
+bindsym $mod+Shift+w exec "$HOME/dotfiles/.config/scripts/cam"
+
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -179,33 +181,28 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # default window borders
-default_border pixel
+default_border normal
 
-#Default behaviour for some applications it's nice to have for me :)
+ assign [class="Spotify"] $ws1
+ assign [class="discord"] $ws2
+ assign [class="Slack"] $ws2
+
 for_window [class="zoom" instance="zoom"] floating enable
 for_window [class="Todoist" instance="todoist"] floating enable
 for_window [class="Shutter" instance="shutter"] floating enable
+for_window [title="video0 - mpv"] floating enable
+for_window [title="video0 - mpv"] sticky enable
+for_window [class="Model viewer"] floating enable
+for_window [class="Model viewer"] resize set 1280 720
+for_window [class="Model viewer"] move position center 
+for_window [class="obs"] floating enable
+for_window [class="obs"] resize set 1280 720
+for_window [class="obs"] move position center 
 for_window [class="floating_st"] floating enable
 
-assign [class="Spotify"] $ws1
-assign [class="thunderbird"] $ws1 
-assign [class="discord"] $ws2
-assign [class="Slack"] $ws2
-assign [title="Thorium"] $ws3
-
-gaps inner 4
-
-## Color section
-# class                 border  bground text    indicator child_border
-# client.focused          #FAC800 #FAC800 #191919 #786B53   #fac800
-# client.focused_inactive #786B53 #786B53 #191919 #484E50   #5F676A
-# client.unfocused        #786B53 #707880 #191919 #292D2E   #222222
-# client.urgent           #A54242 #A54242 #191919 #900000   #900000
-# client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
-# client.background       #ffffff
 bar {
         status_command i3status
-        position top
+        position bottom
 }
 exec_always --no-startup-id picom -b
 exec_always --no-startup-id dunst 
