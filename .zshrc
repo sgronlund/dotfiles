@@ -1,6 +1,8 @@
 autoload -U colors && colors
 source /home/frost/Dev/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source /home/frost/Dev/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+zmodload zsh/complist
+autoload -U compinit && compinit
 # history setup
 setopt SHARE_HISTORY
 setopt EXTENDED_GLOB
