@@ -63,6 +63,7 @@ bindsym $mod+shift+x exec "maim -s | tee ~/Pictures/$(date +%s).png | xclip -sel
 bindsym $mod+shift+q kill
 
 bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+Shift+b exec --no-startup-id blueman-manager
 bindsym $mod+Shift+w exec "$HOME/dotfiles/.config/scripts/cam"
 
 # alternatively, you can use the cursor keys:
@@ -190,6 +191,7 @@ default_border normal
 for_window [class="zoom" instance="zoom"] floating enable
 for_window [class="Todoist" instance="todoist"] floating enable
 for_window [class="Shutter" instance="shutter"] floating enable
+for_window [class="Blueman-manager"] floating enable
 for_window [title="video0 - mpv"] floating enable
 for_window [title="video0 - mpv"] sticky enable
 for_window [class="Model viewer"] floating enable
