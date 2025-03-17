@@ -203,6 +203,9 @@ for_window [class="floating_st"] floating enable
 bar {
         status_command i3status
         position bottom
+        mode hide
+        hidden_state hide
+        modifier Mod4
         font Iosevka Nerd Font 11
 }
 exec_always --no-startup-id picom -b
