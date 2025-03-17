@@ -100,8 +100,10 @@ alias sdi="sudo dpkg -i"
 . "$HOME/.cargo/env"
 export PATH="${PATH}:${HOME}/Dev/"
 export PATH="${PATH}:${HOME}/Dev/lazygit/"
+export PATH="$HOME/.tmuxifier/bin:$PATH"
 export PATH="${PATH}:${HOME}/.config/scripts/"
 
 
 eval "$(zoxide init zsh)"
 eval "$(~/.local/bin/mise activate zsh)"
+eval "$(tmuxifier init -)"
