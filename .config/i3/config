@@ -199,6 +199,7 @@ for_window [class="Model viewer"] floating enable
 for_window [class="Model viewer"] move position center 
 for_window [class="Ray tracer"] floating enable
 for_window [class="Ray tracer"] move position center 
+for_window [class="Ray tracer"] resize set 600 600
 for_window [class="obs"] floating enable
 for_window [class="obs"] move position center 
 for_window [class="floating_st"] floating enable
