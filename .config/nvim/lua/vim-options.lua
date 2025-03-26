@@ -20,3 +20,9 @@ vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower win
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 vim.keymap.set("n", "<Tab>", ">>")
 vim.keymap.set("n", "<S-Tab>", "<<")
+-- clumsy bindings due to shift hehe
+vim.cmd([[cnoreabbrev W w
+cnoreabbrev Wq wq
+cnoreabbrev WQ wq
+cnoreabbrev wQ wq
+]])
