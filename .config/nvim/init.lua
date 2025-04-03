@@ -13,3 +13,5 @@ vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
 require("lazy").setup("plugins")
+vim.treesitter.language.register("glsl", "vert");
+vim.treesitter.language.register("glsl", "frag");

@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "clangd", "dockerls", "marksman", "gopls", "jedi_language_server" , "jdtls"},
+				ensure_installed = { "lua_ls", "clangd", "dockerls", "marksman", "gopls", "jedi_language_server" , "jdtls", "glsl_analyzer"},
 			})
 		end,
 	},
@@ -41,6 +41,9 @@ return {
 			lspconfig.gopls.setup({
 				capabilities = capabilites,
 			})
+			lspconfig.glsl_analyzer.setup({
+				capabilities = capabilites,
+			})
 			lspconfig.jedi_language_server.setup({
 				capabilities = capabilites,
 			})
@@ -50,9 +53,13 @@ return {
 			lspconfig.jinja_lsp.setup({
 				capabilities = capabilites,
 			})
+			lspconfig.phpactor.setup({
+				capabilities = capabilites,
+			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+			vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, {})
 		end,
 	},
 }
