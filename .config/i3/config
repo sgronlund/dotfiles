@@ -7,7 +7,6 @@ exec --no-startup-id dex --autostart --environment i3
 exec_always --no-startup-id autotiling
 exec_always --no-startup-id syncthing
 
-
 # yoinked from here https://wiki.archlinux.org/title/I3#Shutdown.2C_reboot.2C_lock_screen
 set $Locker i3lock && sleep 1
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
@@ -40,8 +39,6 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -q s +8%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl -q s 8%-
 
-# added ignore to specific player since sometimes having two players running 
-# in any state caused the event to be changed???? 
 # ignoring youtube for now as it made things mess up
 bindsym XF86AudioPlay exec playerctl --ignore-player=youtube play-pause
 bindsym XF86AudioPause exec playerctl  --ignore-player=youtube play-pause
@@ -67,6 +64,7 @@ bindsym $mod+Shift+b exec --no-startup-id blueman-manager
 bindsym $mod+Shift+s exec --no-startup-id spotify
 bindsym $mod+Shift+w exec "$HOME/dotfiles/.config/scripts/cam"
 bindsym $mod+Shift+l exec "$HOME/dotfiles/.config/scripts/monitor.sh 1"
+bindsym $mod+Shift+o exec "$HOME/dotfiles/.config/scripts/monitor.sh 2"
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -188,13 +186,13 @@ default_border normal
 
 workspace $ws1 output "eDP" "eDP-1"
 workspace $ws2 output "eDP" "eDP-1"
-# if output is either HDMI variants, differ sometimes?, else but on normal laptop screen
 workspace $ws3 output "HDMI-A-0" "HDMI-1" "eDP" "eDP-1"
 workspace $ws4 output "HDMI-A-0" "HDMI-1" "eDP" "eDP-1"
 
 assign [class="Spotify"] $ws1
 assign [class="discord"] $ws2
 assign [class="Slack"] $ws2
+
 for_window [class="zoom" instance="zoom"] floating enable
 for_window [class="Blueman-manager"] floating enable
 for_window [title="video0 - mpv"] floating enable
