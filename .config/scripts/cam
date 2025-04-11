@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-pkill -f /dev/video0 || mpv --autofit=30% --no-osc --no-input-default-bindings /dev/video0
+pkill -f /dev/video0 || mpv --autofit=30% --no-osc --no-input-default-bindings -vf hflip /dev/video0
