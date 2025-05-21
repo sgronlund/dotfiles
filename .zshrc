@@ -16,7 +16,6 @@ export RT_VIEWER_ROOT="$HOME/Uni/computer-graphics/project/rt_viewer"
 export TMUXIFIER_LAYOUT_PATH="$HOME/dotfiles/.config/tmuxifier/"
 
 # Ease updating all the packages
-alias cat="bat"
 alias ts="tmuxifier s"
 alias up="sudo apt update && sudo apt upgrade && sudo apt autoremove"
 # change brightness
