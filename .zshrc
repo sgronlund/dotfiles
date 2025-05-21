@@ -47,6 +47,8 @@ alias lg="lazygit"
 alias gwab="git worktree add -b"
 alias gwa="git worktree add"
 alias gwl="git worktree list"
+alias day="xsct 0"
+alias night="xsct 1700"
 #usage would be something like cheat python/pandas+csv and
 #you'd get results for common csv operations when using 
 #pandas
