@@ -7,7 +7,7 @@ return {
         "MunifTanjim/nui.nvim",
     },
     config = function()
-        vim.keymap.set("n", "<leader>t", ":Neotree filesystem reveal left <CR>", {})
+        vim.keymap.set("n", "<leader>t", ":Neotree toggle=true left <CR>", {})
         require("neo-tree").setup({
             filesystem = {
                 hijack_netrw_behavior = "open_default",
