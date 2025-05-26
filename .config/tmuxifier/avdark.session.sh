@@ -8,7 +8,7 @@ if initialize_session "avdark"; then
   new_window "notes"
   new_window "labs"
   select_window "notes"
-  run_cmd "vim ."
+  run_cmd "vim module*.md avdark_vid*.md"
   select_window "labs"
   run_cmd "cd avdark-labs/"
 fi
