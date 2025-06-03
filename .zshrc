@@ -110,3 +110,4 @@ export PATH="${PATH}:${HOME}/.config/scripts/"
 eval "$(zoxide init zsh)"
 eval "$(~/.local/bin/mise activate zsh)"
 eval "$(tmuxifier init -)"
+bindkey -v
