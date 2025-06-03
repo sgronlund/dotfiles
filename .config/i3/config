@@ -23,7 +23,7 @@ mode "$mode_system" {
 
 bindsym $mod+l mode "$mode_system"
 
-font pango:Iosevka Nerd Font 9
+font pango:AtykonsonMono Nerd Font 9
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -213,6 +213,7 @@ bar {
         mode hide
         hidden_state hide
         modifier Mod4+Shift
+        font pango:AtkysonMono Nerd Font 10
 }
 exec_always --no-startup-id picom -b
 exec_always --no-startup-id dunst 
