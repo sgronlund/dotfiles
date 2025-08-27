@@ -37,10 +37,11 @@ alias gl="git pull"
 alias gp="git push"
 alias gcb="git checkout -b"
 alias gd="git diff"
-alias ls="ls -la --color=auto -h"
+alias l="ls -la --color=auto -h"
 alias gcm="git commit -m"
 alias fd="fdfind"
 alias lg="lazygit"
+alias rlang="R"
 # this alias can be used efficiently within a repo 
 # that has been cloned with the usage of --bare
 # note that this alias also creates a new branch
@@ -87,7 +88,7 @@ autoload -U promptinit; promptinit
 prompt pure
 
 #nerd alias
-alias vim="nvim"
+alias v="nvim"
 alias matlab="matlab -nodesktop"
 alias v3="vim ~/dotfiles/.config/i3/config"
 alias vp="vim ~/dotfiles/.config/polybar/config.ini"
