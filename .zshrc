@@ -1,6 +1,7 @@
 autoload -U colors && colors
 source /home/frost/Dev/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source /home/frost/Dev/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.zsh-vi-mode/zsh-vi-mode.plugin.zsh
 zmodload zsh/complist
 autoload -U compinit && compinit
 # history setup
@@ -110,4 +111,3 @@ export PATH="${PATH}:${HOME}/.config/scripts/"
 eval "$(zoxide init zsh)"
 eval "$(~/.local/bin/mise activate zsh)"
 eval "$(tmuxifier init -)"
-bindkey -v
