@@ -180,9 +180,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# default window borders
-default_border normal
-
 workspace $ws1 output "eDP" "eDP-1"
 workspace $ws2 output "eDP" "eDP-1"
 workspace $ws3 output "HDMI-A-0" "HDMI-1" "eDP" "eDP-1"
@@ -197,7 +194,6 @@ for_window [class="Blueman-manager"] floating enable
 for_window [title="video0 - mpv"] floating enable
 for_window [title="video0 - mpv"] sticky enable
 for_window [title="video0 - mpv"] border none
-for_window [class="mpv"] floating enable
 for_window [class="Model viewer"] floating enable
 for_window [class="Model viewer"] move position center 
 for_window [class="Ray tracer"] floating enable
@@ -217,3 +213,8 @@ bar {
 }
 exec_always --no-startup-id picom -b
 exec_always --no-startup-id dunst 
+
+#no borders thanks :P
+default_border pixel
+default_floating_border pixel
+hide_edge_borders smart
