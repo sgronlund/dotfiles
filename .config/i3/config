@@ -201,6 +201,10 @@ for_window [class="Ray tracer"] move position center
 for_window [class="Ray tracer"] resize set 600 600
 for_window [class="obs"] floating enable
 for_window [class="obs"] move position center 
+for_window [class="bitwarden"] floating enable
+for_window [class="bitwarden"] move position center 
+for_window [class="Bitwarden"] floating enable
+for_window [class="Bitwarden"] move position center 
 for_window [class="floating_st"] floating enable
 
 bar {
