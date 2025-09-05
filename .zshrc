@@ -16,6 +16,7 @@ export MODEL_VIEWER_ROOT="$HOME/Uni/computer-graphics/gltf_viewer"
 export RT_VIEWER_ROOT="$HOME/Uni/computer-graphics/project/rt_viewer"
 export TMUXIFIER_LAYOUT_PATH="$HOME/dotfiles/.config/tmuxifier/"
 
+
 # Ease updating all the packages
 alias ts="tmuxifier s"
 alias up="sudo apt update && sudo apt upgrade && sudo apt autoremove"
@@ -83,9 +84,10 @@ gen_gitignore ()
     fi
 }
 fpath+=($HOME/Dev/pure)
+fpath+=$HOME/Dev/typewritten
 # .zshrc
 autoload -U promptinit; promptinit
-prompt pure
+prompt typewritten
 
 #nerd alias
 alias v="nvim"
@@ -112,3 +114,5 @@ export PATH="${PATH}:${HOME}/.config/scripts/"
 eval "$(zoxide init zsh)"
 eval "$(~/.local/bin/mise activate zsh)"
 eval "$(tmuxifier init -)"
+
+. "$HOME/.local/bin/env"
