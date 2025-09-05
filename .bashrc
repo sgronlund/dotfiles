@@ -180,3 +180,5 @@ alias lg="lazygit"
 alias vim="nvim"
 eval "$(zoxide init posix --hook prompt)"
 
+
+. "$HOME/.local/bin/env"
