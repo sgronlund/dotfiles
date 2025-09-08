@@ -187,6 +187,8 @@ workspace $ws4 output "HDMI-A-0" "HDMI-1" "eDP" "eDP-1"
 
 assign [class="Spotify"] $ws1
 assign [class="discord"] $ws2
+assign [class="vesktop"] $ws2
+assign [class="Vesktop"] $ws2
 assign [class="Slack"] $ws2
 
 for_window [class="zoom" instance="zoom"] floating enable
