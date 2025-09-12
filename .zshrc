@@ -91,10 +91,10 @@ prompt typewritten
 
 #nerd alias
 alias v="nvim"
-alias matlab="matlab -nodesktop"
-alias v3="vim ~/dotfiles/.config/i3/config"
-alias vp="vim ~/dotfiles/.config/polybar/config.ini"
-alias vz="vim ~/dotfiles/.zshrc"
+alias v3="nvim ~/dotfiles/.config/i3/config"
+alias vz="nvim ~/dotfiles/.zshrc"
+alias vn="nvim ~/dotfiles/.config/nvim/"
+
 venv(){
     if [[ -d .venv ]]; then
         source .venv/bin/activate
