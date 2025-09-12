@@ -195,6 +195,8 @@ assign [class="Slack"] $ws2
 
 for_window [class="zoom" instance="zoom"] floating enable
 for_window [class="Blueman-manager"] floating enable
+for_window [class="pavucontrol"] floating enable
+for_window [class="Pavucontrol"] floating enable
 for_window [title="video0 - mpv"] floating enable
 for_window [title="video0 - mpv"] sticky enable
 for_window [title="video0 - mpv"] border none
