@@ -18,7 +18,10 @@ case $arg in
 		xrandr --output "$ext" --primary --auto --right-of "$lap" --scale 1
 		;;
 	2)
-		xrandr --output "$lap" --off
+		xrandr --output "$lap" --off 
+		;;
+	3)
+		xrandr --output "$ext" --same-as "$lap" 
 		;;
 	*)
 		;;
