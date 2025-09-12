@@ -65,6 +65,7 @@ bindsym $mod+Shift+s exec --no-startup-id spotify
 bindsym $mod+Shift+w exec "$HOME/dotfiles/.config/scripts/cam"
 bindsym $mod+Shift+l exec "$HOME/dotfiles/.config/scripts/monitor.sh 1"
 bindsym $mod+Shift+o exec "$HOME/dotfiles/.config/scripts/monitor.sh 2"
+bindsym $mod+Shift+m exec "$HOME/dotfiles/.config/scripts/monitor.sh 3"
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
