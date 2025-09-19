@@ -62,7 +62,8 @@ bindsym $mod+shift+q kill
 bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+Shift+b exec --no-startup-id blueman-manager
 bindsym $mod+Shift+s exec --no-startup-id spotify
-bindsym $mod+Shift+w exec "$HOME/dotfiles/.config/scripts/cam"
+bindsym $mod+Shift+w exec --no-startup-id thorium-browser
+bindsym $mod+Shift+c exec "$HOME/dotfiles/.config/scripts/cam"
 bindsym $mod+Shift+l exec "$HOME/dotfiles/.config/scripts/monitor.sh 1"
 bindsym $mod+Shift+o exec "$HOME/dotfiles/.config/scripts/monitor.sh 2"
 bindsym $mod+Shift+m exec "$HOME/dotfiles/.config/scripts/monitor.sh 3"
@@ -146,7 +147,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+#bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
