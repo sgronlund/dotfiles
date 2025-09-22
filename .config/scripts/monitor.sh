@@ -16,12 +16,15 @@ done
 case $arg in
 	1)
 		xrandr --output "$ext" --primary --auto --right-of "$lap" --scale 1
+		hsetroot -add '#fc6b41' -add '#830532' -gradient 0
 		;;
 	2)
 		xrandr --output "$lap" --off 
+		hsetroot -add '#fc6b41' -add '#830532' -gradient 0
 		;;
 	3)
-		xrandr --output "$ext" --same-as "$lap" 
+		xrandr --output "$ext" --scale 0.5 --same-as "$lap" 
+		hsetroot -add '#fc6b41' -add '#830532' -gradient 0
 		;;
 	*)
 		;;
