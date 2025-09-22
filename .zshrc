@@ -110,6 +110,8 @@ export PATH="${PATH}:${HOME}/Dev/"
 export PATH="${PATH}:${HOME}/Dev/lazygit/"
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 export PATH="${PATH}:${HOME}/.config/scripts/"
+export PATH="${PATH}:${HOME}/Dev/texpresso/build/"
+export PATH="$PATH:$HOME/Downloads/private/nvim-linux-x86_64/bin"
 
 eval "$(zoxide init zsh)"
 eval "$(~/.local/bin/mise activate zsh)"
