@@ -30,7 +30,6 @@ font pango:AtykonsonMono Nerd Font 9
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
-exec_always --no-startup-id feh --recursive --bg-fill --randomize /home/frost/Downloads/sötabilder
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -63,7 +62,9 @@ bindsym $mod+shift+q kill
 bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+Shift+b exec --no-startup-id blueman-manager
 bindsym $mod+Shift+s exec --no-startup-id spotify
-bindsym $mod+Shift+w exec --no-startup-id thorium-browser
+bindsym $mod+Shift+w exec --no-startup-id brave-browser
+#experimenting w/ browser change
+#bindsym $mod+Shift+w exec --no-startup-id thorium-browser
 bindsym $mod+Shift+c exec "$HOME/dotfiles/.config/scripts/cam"
 bindsym $mod+Shift+l exec "$HOME/dotfiles/.config/scripts/monitor.sh 1"
 bindsym $mod+Shift+o exec "$HOME/dotfiles/.config/scripts/monitor.sh 2"
