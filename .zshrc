@@ -118,3 +118,5 @@ eval "$(~/.local/bin/mise activate zsh)"
 eval "$(tmuxifier init -)"
 
 . "$HOME/.local/bin/env"
+
+eval "$(/home/frost/.local/bin/mise activate zsh)" # added by https://mise.run/zsh
