@@ -192,8 +192,6 @@ workspace $ws4 output "HDMI-A-0" "HDMI-1" "eDP" "eDP-1"
 
 assign [class="Spotify"] $ws1
 assign [class="discord"] $ws2
-assign [class="vesktop"] $ws2
-assign [class="Vesktop"] $ws2
 assign [class="Slack"] $ws2
 
 for_window [class="zoom" instance="zoom"] floating enable
@@ -219,10 +217,8 @@ for_window [class="floating_st"] floating enable
 bar {
         status_command i3status
         position top
-        mode hide
-        hidden_state hide
-        modifier Mod4+Shift
-        font pango:AtkysonMono Nerd Font 10
+        mode dock
+        font pango:AtkysonMono Nerd Font 8
 }
 exec_always --no-startup-id picom -b
 exec_always --no-startup-id dunst 
