@@ -11,6 +11,7 @@ SAVEHIST=12000
 HISTSIZE=10000
 HISTFILE=~/.zsh_history
 export PATH="${PATH}:${HOME}/.local/bin/"
+export PATH="${PATH}:${HOME}/Uni/ml-iot/arduino-ide/"
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
 export MODEL_VIEWER_ROOT="$HOME/Uni/computer-graphics/gltf_viewer"
 export RT_VIEWER_ROOT="$HOME/Uni/computer-graphics/project/rt_viewer"
