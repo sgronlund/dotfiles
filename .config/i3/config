@@ -224,6 +224,7 @@ for_window [class="floating_st"] floating enable
 bar {
         status_command i3status
         position top
+        tray_padding 0
         mode dock
         font pango:AtkysonMono Nerd Font 8
 }
