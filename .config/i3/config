@@ -60,7 +60,8 @@ bindsym $mod+shift+q kill
 
 bindsym $mod+d exec --no-startup-id dmenu_run -c -l 10 -p "Run:" -bw 2
 bindsym $mod+Shift+b exec --no-startup-id blueman-manager
-bindsym $mod+Shift+s exec --no-startup-id spotify
+# Had to install snap as latest .deb of Spotify requires a newer version of GLIBC 
+bindsym $mod+Shift+s exec --no-startup-id snap run spotify
 bindsym $mod+Shift+w exec --no-startup-id brave-browser
 #experimenting w/ browser change
 #bindsym $mod+Shift+w exec --no-startup-id thorium-browser
