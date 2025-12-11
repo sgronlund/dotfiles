@@ -193,11 +193,15 @@ workspace $ws4 output "HDMI-A-0" "HDMI-1" "eDP" "eDP-1"
 assign [class="Spotify"] $ws1
 assign [class="discord"] $ws2
 assign [class="Slack"] $ws2
+assign [class="brave-browser"] $ws3
+assign [class="Brave-browser"] $ws3
 
 for_window [class="zoom" instance="zoom"] floating enable
 for_window [class="matplotlib" instance="matplotlib"] floating enable
 for_window [class="Blueman-manager"] floating enable
 for_window [class="pavucontrol"] floating enable
+for_window [class="anki"] floating enable
+for_window [class="Anki"] floating enable
 # add floating behaviour for set of tooltip windows created by brave.
 for_window [window_role="bubble"] floating enable
 for_window [class="Pavucontrol"] floating enable
