@@ -15,16 +15,16 @@ do
 done
 case $arg in
 	1)
-		xrandr --output "$ext" --primary --auto --right-of "$lap" --scale 1
-		hsetroot -add '#fc6b41' -add '#830532' -gradient 0
+		xrandr --output "$ext" --primary --auto --right-of "$lap"
+        hsetroot -fill ~/Downloads/private/daniel-leone-v7daTKlZzaw-unsplash.jpg
 		;;
 	2)
 		xrandr --output "$lap" --off 
-		hsetroot -add '#fc6b41' -add '#830532' -gradient 0
+        hsetroot -fill ~/Downloads/private/daniel-leone-v7daTKlZzaw-unsplash.jpg
 		;;
 	3)
-		xrandr --output "$ext" --scale 0.5 --same-as "$lap" 
-		hsetroot -add '#fc6b41' -add '#830532' -gradient 0
+		xrandr --output "$ext" --scale 1 --same-as "$lap" 
+        hsetroot -fill ~/Downloads/private/daniel-leone-v7daTKlZzaw-unsplash.jpg
 		;;
 	*)
 		;;
