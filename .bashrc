@@ -182,3 +182,18 @@ eval "$(zoxide init posix --hook prompt)"
 
 
 . "$HOME/.local/bin/env"
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/home/frost/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/home/frost/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<
