@@ -187,12 +187,14 @@ bindsym $mod+r mode "resize"
 
 workspace $ws1 output "eDP" "eDP-1"
 workspace $ws2 output "eDP" "eDP-1"
-workspace $ws3 output "HDMI-A-0" "HDMI-1" "eDP" "eDP-1"
+workspace $ws3 output "eDP" "eDP-1"
 workspace $ws4 output "HDMI-A-0" "HDMI-1" "eDP" "eDP-1"
+workspace $ws5 output "HDMI-A-0" "HDMI-1" "eDP" "eDP-1"
 
 assign [class="Spotify"] $ws1
 assign [class="discord"] $ws2
 assign [class="Slack"] $ws2
+assign [class="teams-for-linux"] $ws2
 assign [class="brave-browser"] $ws3
 assign [class="Brave-browser"] $ws3
 
