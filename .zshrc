@@ -16,7 +16,7 @@ export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
 export MODEL_VIEWER_ROOT="$HOME/Uni/computer-graphics/gltf_viewer"
 export RT_VIEWER_ROOT="$HOME/Uni/computer-graphics/project/rt_viewer"
 export TMUXIFIER_LAYOUT_PATH="$HOME/dotfiles/.config/tmuxifier/"
-
+export ORPAILLECC_DIR="$HOME/Dev/OrpailleCC"
 
 # Ease updating all the packages
 alias ts="tmuxifier s"
@@ -39,8 +39,11 @@ alias gl="git pull"
 alias gp="git push"
 alias gcb="git checkout -b"
 alias gd="git diff"
-alias l="ls -la --color=always -h"
+# GitHub CLI aliases
+alias ghic="gh issue create"
+alias ghil="gh issue list"
 alias gcm="git commit -m"
+alias l="ls -la --color=always -h"
 alias fd="fdfind"
 alias lg="lazygit"
 alias rlang="R"
@@ -121,3 +124,12 @@ eval "$(tmuxifier init -)"
 . "$HOME/.local/bin/env"
 
 eval "$(/home/frost/.local/bin/mise activate zsh)" # added by https://mise.run/zsh
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/home/frost/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<
