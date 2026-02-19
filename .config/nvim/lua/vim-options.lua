@@ -11,6 +11,9 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smarttab = true
+-- vim.opt.spell = true
+-- -- TODO: Add locale for swedish/finnish whenever ftp is back and running
+-- vim.opt.spelllang = { "en_us" }
 vim.opt.list = true
 vim.api.nvim_set_option("clipboard", "unnamedplus")
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
