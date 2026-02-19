@@ -117,6 +117,8 @@ export PATH="$HOME/.tmuxifier/bin:$PATH"
 export PATH="${PATH}:${HOME}/.config/scripts/"
 export PATH="${PATH}:${HOME}/Dev/texpresso/build/"
 export PATH="$PATH:$HOME/Downloads/private/nvim-linux-x86_64/bin"
+export PATH="$PATH:$HOME/STM32CubeMX"
+export PATH="$PATH:$HOME/stm32cubeide_2.0.0"
 
 eval "$(zoxide init zsh)"
 eval "$(~/.local/bin/mise activate zsh)"
