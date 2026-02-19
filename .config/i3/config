@@ -58,7 +58,7 @@ bindsym $mod+shift+x exec "maim -s | tee ~/Pictures/$(date +%s).png | xclip -sel
 # kill focused window
 bindsym $mod+shift+q kill
 
-bindsym $mod+d exec --no-startup-id dmenu_run -c -l 10 -p "Run:" -bw 2
+bindsym $mod+d exec dmenu_run -c -fn "AtkynsonMono Nerd Font" -l 10 -p "Run:" -bw 2
 bindsym $mod+Shift+b exec --no-startup-id blueman-manager
 # Had to install snap as latest .deb of Spotify requires a newer version of GLIBC 
 bindsym $mod+Shift+s exec --no-startup-id snap run spotify
@@ -187,7 +187,7 @@ bindsym $mod+r mode "resize"
 
 workspace $ws1 output "eDP" "eDP-1"
 workspace $ws2 output "eDP" "eDP-1"
-workspace $ws3 output "eDP" "eDP-1"
+workspace $ws3 output "HDMI-A-0" "HDMI-1" "eDP" "eDP-1"
 workspace $ws4 output "HDMI-A-0" "HDMI-1" "eDP" "eDP-1"
 workspace $ws5 output "HDMI-A-0" "HDMI-1" "eDP" "eDP-1"
 
@@ -204,6 +204,11 @@ for_window [class="Blueman-manager"] floating enable
 for_window [class="pavucontrol"] floating enable
 for_window [class="anki"] floating enable
 for_window [class="Anki"] floating enable
+for_window [class="matplotlib"] floating enable
+for_window [class="Matplotlib"] floating enable
+for_window [class="massif-visualizer"] floating enable
+for_window [class="massif-visualizer"] floating enable
+for_window [class="qimgv"] floating enable
 # add floating behaviour for set of tooltip windows created by brave.
 for_window [window_role="bubble"] floating enable
 for_window [class="Pavucontrol"] floating enable
@@ -228,12 +233,13 @@ bar {
         position top
         tray_padding 0
         mode dock
-        font pango:AtkysonMono Nerd Font 8
+        font pango:AtkysonMono Nerd Font 10
 }
 exec_always --no-startup-id picom -b
 exec_always --no-startup-id dunst 
 
 #no borders thanks :P
-default_border pixel
+default_border normal
 default_floating_border pixel
-hide_edge_borders smart
+hide_edge_borders smart_no_gaps
+title_align center
