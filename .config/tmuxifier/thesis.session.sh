@@ -14,7 +14,16 @@ if initialize_session "thesis"; then
     split_h 50
     select_pane 2
     run_cmd "z data "
+    new_window "report"
+    run_cmd "z report && nvim ."
+    new_window "libraries"
+    run_cmd "z benchmark-har-data-stream && nvim ."
+    split_h 50
+    select_pane 1
+    run_cmd "z OrpailleCC && nvim ."
+    new_window "prev-thesis"
+    run_cmd "z prev_thesis_mf && nvim ."
+    select_window 0
 fi
-
 # Finalize session creation and switch/attach to it.
 finalize_and_go_to_session
