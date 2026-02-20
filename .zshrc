@@ -119,6 +119,8 @@ export PATH="${PATH}:${HOME}/Dev/texpresso/build/"
 export PATH="$PATH:$HOME/Downloads/private/nvim-linux-x86_64/bin"
 export PATH="$PATH:$HOME/STM32CubeMX"
 export PATH="$PATH:$HOME/stm32cubeide_2.0.0"
+export PATH="$PATH:$HOME/Downloads/gcc-arm-none-eabi-10.3-2021.10/bin"
+export PATH="$PATH:$HOME/Downloads/uClibc++-0.2.5/bin"
 
 eval "$(zoxide init zsh)"
 eval "$(~/.local/bin/mise activate zsh)"
