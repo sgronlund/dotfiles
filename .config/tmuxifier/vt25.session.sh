@@ -1,20 +1,20 @@
 # Set a custom session root path. Default is `$HOME`.
 # Must be called before `initialize_session`.
-session_root "~/Uni/advanced-computer-architecture"
+session_root "~/"
 
 # Create session with specified name if it does not already exist. If no
 # argument is given, session name will be based on layout file name.
-if initialize_session "avdark"; then
-  new_window "notes"
-  new_window "labs"
-  select_window "notes"
-  run_cmd "vim module*.md"
-  split_v 5
-  select_pane 1
-  run_cmd "vim *.txt"
-  select_window "labs"
-  run_cmd "cd avdark-labs/"
-  select_window "notes"
+if initialize_session "vt25"; then
+
+  # Create a new window inline within session layout definition.
+  #new_window "misc"
+  new_window "CISA"
+  run_cmd "z computer-intensive-statistics-and-applications"
+  new_window "Graph"
+  run_cmd "z graph-theory"
+  new_window "thesis"
+  run_cmd "z thesis"
+
 fi
 
 # Finalize session creation and switch/attach to it.
