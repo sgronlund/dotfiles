@@ -49,7 +49,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec st 
-bindsym $mod+Shift+Return exec st -c floating_st 
+bindsym $mod+Shift+Return exec st -g 100x30 -c floating_st 
 
 # screengrab
 bindsym $mod+x exec "maim | tee ~/Pictures/$(date +%s).png | xclip -selection clipboard -t image/png" 
