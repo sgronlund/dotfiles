@@ -1,4 +1,15 @@
 set $mod Mod4
+# colorscheme kindly borrowed from https://github.com/a-schaefers/i3-wm-gruvbox-theme/blob/master/i3/config
+# set primary gruvbox colorscheme colors
+set $bg #282828
+set $red #cc241d
+set $green #98971a
+set $yellow #d79921
+set $blue #458588
+set $purple #b16286
+set $aqua #689d68
+set $gray #a89984
+set $darkgray #1d2021
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -58,7 +69,7 @@ bindsym $mod+shift+x exec "maim -s | tee ~/Pictures/$(date +%s).png | xclip -sel
 # kill focused window
 bindsym $mod+shift+q kill
 
-bindsym $mod+d exec dmenu_run -c -fn "AtkynsonMono Nerd Font" -l 10 -p "Run:" -bw 2
+bindsym $mod+d exec dmenu_run -c -nb "#282828" -nf "#d79921" -sb "$gray" -sf "$darkgray" -bw 0 -fn "AtkynsonMono Nerd Font" -l 10 -p "Run:"
 bindsym $mod+Shift+b exec --no-startup-id blueman-manager
 # Had to install snap as latest .deb of Spotify requires a newer version of GLIBC 
 bindsym $mod+Shift+s exec --no-startup-id snap run spotify
@@ -216,6 +227,7 @@ for_window [title="video0 - mpv"] floating enable
 for_window [title="video0 - mpv"] sticky enable
 for_window [title="video0 - mpv"] border none
 for_window [class="Model viewer"] floating enable
+for_window [class="moa-gui-GUI"] floating enable
 for_window [class="Model viewer"] move position center 
 for_window [class="Ray tracer"] floating enable
 for_window [class="Ray tracer"] move position center 
@@ -228,17 +240,6 @@ for_window [class="Bitwarden"] floating enable
 for_window [class="Bitwarden"] move position center 
 for_window [class="floating_st"] floating enable
 
-# colorscheme kindly borrowed from https://github.com/a-schaefers/i3-wm-gruvbox-theme/blob/master/i3/config
-# set primary gruvbox colorscheme colors
-set $bg #282828
-set $red #cc241d
-set $green #98971a
-set $yellow #d79921
-set $blue #458588
-set $purple #b16286
-set $aqua #689d68
-set $gray #a89984
-set $darkgray #1d2021
 bar {
         status_command i3status
         position top
