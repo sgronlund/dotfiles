@@ -15,6 +15,7 @@ set $darkgray #1d2021
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id "hsetroot -fill ~/Downloads/private/daniel-leone-v7daTKlZzaw-unsplash.jpg"
+exec brave-browser --app=https://teams.microsoft.com/v2/
 # cred to https://github.com/nwg-piotr/autotiling
 exec_always --no-startup-id autotiling
 
@@ -207,6 +208,7 @@ assign [class="discord"] $ws2
 assign [class="Slack"] $ws2
 assign [class="teams-for-linux"] $ws2
 assign [class="brave-browser"] $ws3
+assign [title="*Microsoft Teams"] $ws2
 assign [class="Brave-browser"] $ws3
 
 for_window [class="zoom" instance="zoom"] floating enable
