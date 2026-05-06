@@ -11,7 +11,7 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smarttab = true
--- vim.opt.spell = true
+vim.opt.spell = true
 -- -- TODO: Add locale for swedish/finnish whenever ftp is back and running
 -- vim.opt.spelllang = { "en_us" }
 vim.opt.list = true
@@ -28,6 +28,10 @@ vim.keymap.set("n", "<Tab>", ">>")
 vim.keymap.set("n", "<S-Tab>", "<<")
 vim.keymap.set("v", "<Tab>", ">")
 vim.keymap.set("v", "<S-Tab>", "<")
+vim.keymap.set("n", "q", "<nop>")
+vim.keymap.set("n", "<Leader>q", "q")
+-- noremap <Leader>q q
+-- noremap q <Nop>
 
 -- clumsy bindings due to shift hehe
 vim.cmd([[cnoreabbrev W w
@@ -35,3 +39,4 @@ cnoreabbrev Wq wq
 cnoreabbrev WQ wq
 cnoreabbrev wQ wq
 ]])
+vim.cmd([[colorscheme slate]])
