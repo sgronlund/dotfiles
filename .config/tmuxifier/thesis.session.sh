@@ -8,10 +8,10 @@ if initialize_session "thesis"; then
     # Create a new window inline within session layout definition.
     new_window "main"
     run_cmd "nvim ."
-    split_v 15
+    split_h 5
     select_pane 1
     run_cmd "z src "
-    split_h 50
+    split_v 50
     select_pane 2
     run_cmd "z data "
     new_window "report"
