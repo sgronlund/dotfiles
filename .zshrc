@@ -10,6 +10,7 @@ setopt EXTENDED_GLOB
 SAVEHIST=12000
 HISTSIZE=10000
 HISTFILE=~/.zsh_history
+ZSH_PROMPT=
 export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="${PATH}:${HOME}/Uni/ml-iot/arduino-ide/"
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
@@ -88,11 +89,11 @@ gen_gitignore ()
         wget -q "https://www.toptal.com/developers/gitignore/api/$real_parts" -O .gitignore
     fi
 }
-fpath+=($HOME/Dev/pure)
-fpath+=$HOME/Dev/typewritten
+# fpath+=($HOME/Dev/pure)
+# fpath+=$HOME/Dev/typewritten
 # .zshrc
 autoload -U promptinit; promptinit
-prompt typewritten
+# prompt typewritten
 
 #nerd alias
 alias v="nvim"
@@ -138,3 +139,6 @@ path=('/home/frost/.juliaup/bin' $path)
 export PATH
 
 # <<< juliaup initialize <<<
+
+# opencode
+export PATH=/home/frost/.opencode/bin:$PATH
