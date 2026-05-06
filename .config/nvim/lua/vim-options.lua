@@ -39,4 +39,4 @@ cnoreabbrev Wq wq
 cnoreabbrev WQ wq
 cnoreabbrev wQ wq
 ]])
-vim.cmd([[colorscheme slate]])
+vim.cmd([[colorscheme elflord]])

@@ -10,7 +10,7 @@ setopt EXTENDED_GLOB
 SAVEHIST=12000
 HISTSIZE=10000
 HISTFILE=~/.zsh_history
-ZSH_PROMPT=
+export PROMPT='%F{blue}%~ %(?.%F{green}.%F{red})%#%f '
 export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="${PATH}:${HOME}/Uni/ml-iot/arduino-ide/"
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
