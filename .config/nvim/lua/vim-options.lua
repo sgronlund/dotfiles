@@ -39,4 +39,4 @@ cnoreabbrev Wq wq
 cnoreabbrev WQ wq
 cnoreabbrev wQ wq
 ]])
-vim.cmd([[colorscheme elflord]])
+-- vim.cmd([[colorscheme kanagawa]])

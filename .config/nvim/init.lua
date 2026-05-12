@@ -17,5 +17,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
 require("lazy").setup("plugins")
+require("kanagawa").load("wave")
 vim.treesitter.language.register("glsl", "vert");
 vim.treesitter.language.register("glsl", "frag");
