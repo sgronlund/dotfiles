@@ -60,7 +60,7 @@ bindsym $mod+shift+x exec "maim -s | tee ~/Pictures/$(date +%s).png | xclip -sel
 bindsym $mod+shift+q kill
 
 bindsym $mod+d exec dmenu_run -c -fn "AtkynsonMono Nerd Font" -l 8 -p "Run:"
-bindsym $mod+Shift+b exec --no-startup-id blueman-manager
+bindsym $mod+Shift+b exec "$HOME/dotfiles/.config/scripts/blueman_toggler"
 # Had to install snap as latest .deb of Spotify requires a newer version of GLIBC 
 bindsym $mod+Shift+s exec --no-startup-id snap run spotify
 bindsym $mod+Shift+w exec --no-startup-id brave-browser
