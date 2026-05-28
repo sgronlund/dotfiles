@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-pkill -f /usr/bin/blueman-manager || blueman-manager
+pkill -f bluetui || st -g 128x30 -c floating_st -e bluetui
