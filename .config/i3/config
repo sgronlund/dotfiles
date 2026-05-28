@@ -5,8 +5,11 @@ set $mod Mod4
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id "hsetroot -fill ~/Downloads/private/daniel-leone-v7daTKlZzaw-unsplash.jpg"
 exec --no-startup-id snap run spotify
+# exec --no-startup-id picom -b #todo: figure out if needed?
+exec --no-startup-id dunst
+exec brave-browser --app=https://teams.microsoft.com/v2/
 # cred to https://github.com/nwg-piotr/autotiling
-exec_always --no-startup-id autotiling
+exec --no-startup-id autotiling
 
 # yoinked from here https://wiki.archlinux.org/title/I3#Shutdown.2C_reboot.2C_lock_screen
 set $Locker i3lock && sleep 1
@@ -22,7 +25,6 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-
 bindsym $mod+l mode "$mode_system"
 
 font pango:AtykonsonMono Nerd Font 9
@@ -49,8 +51,8 @@ bindsym XF86AudioNext exec playerctl  --ignore-player=youtube next
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st 
-bindsym $mod+Shift+Return exec st -g 100x30 -c floating_st 
+bindsym $mod+Return exec st
+bindsym $mod+Shift+Return exec st -g 100x30 -c floating_st
 
 # screengrab
 bindsym $mod+x exec "maim | tee ~/Pictures/$(date +%s).png | xclip -selection clipboard -t image/png" 
@@ -240,13 +242,5 @@ bar {
         mode dock
         font pango:AtkysonMono Nerd Font 8
 }
-exec_always --no-startup-id picom -b
-exec_always --no-startup-id dunst 
-exec brave-browser --app=https://teams.microsoft.com/v2/
-
 default_border pixel 2
-default_floating_border pixel 2
-smart_gaps on
-gaps inner 5
-gaps outer 2
-title_align center
+default_floating_border pixel 
