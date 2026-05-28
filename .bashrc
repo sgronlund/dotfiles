@@ -197,3 +197,5 @@ case ":$PATH:" in
 esac
 
 # <<< juliaup initialize <<<
+
+export STM32_PRG_PATH=/home/frost/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin
