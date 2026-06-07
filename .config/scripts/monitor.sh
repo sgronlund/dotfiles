@@ -1,5 +1,4 @@
 #!/usr/bin/bash
-
 # Simple scripts to ease configuration of monitors
 
 arg=$1
@@ -16,16 +15,21 @@ done
 case $arg in
 	1)
 		xrandr --output "$ext" --primary --auto --right-of "$lap"
-        hsetroot -fill ~/Downloads/private/daniel-leone-v7daTKlZzaw-unsplash.jpg
+        if [[ -n "$ext" ]]; then
+            xrandr --output "$ext" --primary --auto --right-of "$lap"
+        else 
+
+		xrandr --output "$lap" --primary --auto 
+        fi
+
 		;;
 	2)
 		xrandr --output "$lap" --off 
-        hsetroot -fill ~/Downloads/private/daniel-leone-v7daTKlZzaw-unsplash.jpg
 		;;
 	3)
 		xrandr --output "$ext" --scale 1 --same-as "$lap" 
-        hsetroot -fill ~/Downloads/private/daniel-leone-v7daTKlZzaw-unsplash.jpg
 		;;
 	*)
 		;;
 esac
+hsetroot -fill ~/Downloads/private/daniel-leone-v7daTKlZzaw-unsplash.jpg

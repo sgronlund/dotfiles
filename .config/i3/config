@@ -240,6 +240,7 @@ bar {
         position top
         tray_padding 0
         mode dock
+        tray_output primary
         font pango:AtkysonMono Nerd Font 8
 }
 default_border pixel 2
