@@ -123,6 +123,7 @@ export PATH="$PATH:$HOME/stm32cubeide_2.0.0"
 export PATH="$PATH:$HOME/stm32cubeide_2.0.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.linux64_1.0.100.202602081740/tools/bin"
 export PATH="$PATH:$HOME/Downloads/uClibc++-0.2.5/bin"
 export PATH="$PATH:$HOME/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin"
+export PATH="$PATH:/snap/bin"
 
 eval "$(zoxide init zsh)"
 eval "$(~/.local/bin/mise activate zsh)"
