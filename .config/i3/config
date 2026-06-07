@@ -9,7 +9,7 @@ exec --no-startup-id snap run spotify
 exec --no-startup-id dunst
 exec brave-browser --app=https://teams.microsoft.com/v2/
 # cred to https://github.com/nwg-piotr/autotiling
-exec --no-startup-id autotiling
+exec_always --no-startup-id autotiling
 
 # yoinked from here https://wiki.archlinux.org/title/I3#Shutdown.2C_reboot.2C_lock_screen
 set $Locker i3lock && sleep 1
