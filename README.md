@@ -7,12 +7,10 @@ these are my dotfiles, simple enough.
 - st (flexipatch)
 - nvim
 - dunst
-- picom
 - ~variety~ cronjob using feh
 - nnn (file explorer)
     - thunar for more "advanced" operations
 - lazygit (git TUI with basic keybinds)
-- lazydocker (same as above but for docker)
-- zoxide (cd but better)
+- zoxide (cd but history and fuzzy-finding paths)
 - mise (tool for managing versions of node, python, golang etc.)
 - uv (somewhat drop-in replace of pip written in rust)
