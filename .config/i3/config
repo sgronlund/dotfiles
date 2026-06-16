@@ -201,7 +201,7 @@ assign [class="Slack"] $ws1
 # assign [class="brave-browser"] $ws2
 # assign [class="teams.microsoft.com__v2"] $ws2
 # assign [class="Brave-browser"] $ws2
-assign [class="Zotero"] $ws4
+# assign [class="Zotero"] $ws4
 
 for_window [class="zoom" instance="zoom"] floating enable
 for_window [class="matplotlib" instance="matplotlib"] floating enable
@@ -240,7 +240,7 @@ bar {
         position bottom
         tray_padding 0
         tray_output primary
-        font pango:AtkysonMono Nerd Font 8
+        font pango:AtkysonMono Nerd Font 7
 }
 default_border normal
 default_floating_border pixel 
