@@ -10,7 +10,10 @@ setopt EXTENDED_GLOB
 SAVEHIST=12000
 HISTSIZE=10000
 HISTFILE=~/.zsh_history
-export PROMPT='%F{blue}%~ %(?.%F{green}.%F{red})%#%f '
+# export PROMPT='%F{blue}%~ %(?.%F{green}.%F{red})%#%f '
+# export PS1="%{$(tput setaf 216)%}%n%{$(tput setaf 220)%}@%{$(tput setaf 222)%}%m %{$(tput setaf 229)%}%1~ %{$(tput sgr0)%}$ "
+# monochromatic prompt stolen from here :) https://robotmoon.com/zsh-prompt-generator/
+export PS1="%{$(tput setaf 243)%}%n%{$(tput setaf 245)%}@%{$(tput setaf 249)%}%m %{$(tput setaf 254)%}%1~ %{$(tput sgr0)%}$ "
 export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="${PATH}:${HOME}/Uni/ml-iot/arduino-ide/"
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
@@ -144,3 +147,11 @@ export PATH
 
 # opencode
 export PATH=/home/frost/.opencode/bin:$PATH
+
+# pnpm
+export PNPM_HOME="/home/frost/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
