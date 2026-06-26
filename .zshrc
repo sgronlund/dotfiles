@@ -93,7 +93,7 @@ gen_gitignore ()
     fi
 }
 # fpath+=($HOME/Dev/pure)
-# fpath+=$HOME/Dev/typewritten
+fpath+=$HOME/Dev/zsh-completions/src
 # .zshrc
 autoload -U promptinit; promptinit
 # prompt typewritten
