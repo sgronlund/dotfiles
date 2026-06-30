@@ -7,7 +7,6 @@ exec --no-startup-id "hsetroot -fill ~/Downloads/private/daniel-leone-v7daTKlZza
 exec --no-startup-id snap run spotify
 # exec --no-startup-id picom -b #todo: figure out if needed?
 exec --no-startup-id dunst
-exec brave-browser --app=https://teams.microsoft.com/v2/
 # cred to https://github.com/nwg-piotr/autotiling
 exec_always --no-startup-id autotiling
 
